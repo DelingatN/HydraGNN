@@ -23,7 +23,7 @@ from hydragnn.utils.model import activation_function_selection, loss_function_se
 from hydragnn.utils.model.oversmoothing import compute_hetero_oversmoothing_metrics
 from hydragnn.utils.distributed import get_device
 from hydragnn.models.Base import MLPNode
-from hydragnn.globalAtt.Hetero_gps import HeteroGPSConv
+from hydragnn.globalAtt.HeteroGPS import HeteroGPSConv
 
 
 class HeteroBase(Module):
@@ -68,8 +68,6 @@ class HeteroBase(Module):
     ):
         super().__init__()
 
-        self.use_global_attn = bool(global_attn_engine)
-
         self.device = get_device()
         self.input_dim = input_dim
         self.pe_dim = pe_dim
@@ -92,6 +90,10 @@ class HeteroBase(Module):
         self.global_attn_type = global_attn_type
         self.global_attn_heads = global_attn_heads
         self.attn_only = bool(attn_only)
+        if self.global_attn_engine == "GPS-attn-only":
+            self.global_attn_engine = "GPS"
+            self.attn_only = True
+        self.use_global_attn = bool(self.global_attn_engine)
         oversmoothing_config = oversmoothing_config or {}
         self.log_oversmoothing = bool(oversmoothing_config.get("enabled", False))
         self.oversmoothing_every_n_batches = max(
@@ -320,6 +322,20 @@ class HeteroBase(Module):
             _, rel, _ = edge_type
             return edge_dim.get(rel)
         return edge_dim
+
+    def _apply_global_attn(self, mpnn):
+        if not self.use_global_attn:
+            return mpnn
+        if self.global_attn_engine == "GPS":
+            return HeteroGPSConv(
+                channels=self.hidden_dim,
+                metadata=self._metadata,
+                conv=None if self.attn_only else mpnn,
+                heads=self.global_attn_heads,
+                dropout=self.dropout,
+                attn_type=self.global_attn_type,
+            )
+        raise ValueError(f"Unsupported global_attn_engine: {self.global_attn_engine}")
 
     def _init_conv(self):
         self.graph_convs = ModuleList()
