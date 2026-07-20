@@ -125,6 +125,7 @@ def create_model_config(
         hetero_edge_attr_emb_dim=config["Architecture"].get(
             "hetero_edge_attr_emb_dim", 16
         ),
+        oversmoothing_config=config["Training"].get("Oversmoothing", {}),
         verbosity=verbosity,
         use_gpu=use_gpu,
     )
@@ -194,6 +195,7 @@ def create_model(
     hetero_attention_negative_slope: float = 0.2,
     hetero_edge_type_emb_dim: int = 16,
     hetero_edge_attr_emb_dim: int = 16,
+    oversmoothing_config: dict | None = None,
     verbosity: int = 0,
     use_gpu: bool = True,
     attn_only: bool = False,
@@ -648,6 +650,7 @@ def create_model(
             metadata=metadata,
             node_input_dims=node_input_dims,
             attn_only=attn_only,
+            oversmoothing_config=oversmoothing_config,
         )
 
     elif mpnn_type == "HeteroSAGE":
@@ -678,6 +681,7 @@ def create_model(
             metadata=metadata,
             node_input_dims=node_input_dims,
             attn_only=attn_only,
+            oversmoothing_config=oversmoothing_config,
         )
 
     elif mpnn_type == "HeteroGAT":
@@ -713,6 +717,7 @@ def create_model(
             metadata=metadata,
             node_input_dims=node_input_dims,
             attn_only=attn_only,
+            oversmoothing_config=oversmoothing_config,
         )
 
     elif mpnn_type == "HeteroPNA":
@@ -746,6 +751,7 @@ def create_model(
             metadata=metadata,
             node_input_dims=node_input_dims,
             attn_only=attn_only,
+            oversmoothing_config=oversmoothing_config,
         )
     elif mpnn_type == "HeteroRGAT":
         model = HeteroRGATStack(
@@ -778,6 +784,7 @@ def create_model(
             metadata=metadata,
             node_input_dims=node_input_dims,
             attn_only=attn_only,
+            oversmoothing_config=oversmoothing_config,
         )
     elif mpnn_type == "HeteroHGT":
         model = HeteroHGTStack(
@@ -808,6 +815,7 @@ def create_model(
             metadata=metadata,
             node_input_dims=node_input_dims,
             attn_only=attn_only,
+            oversmoothing_config=oversmoothing_config,
         )
     elif mpnn_type == "HeteroHEAT":
         model = HeteroHEATStack(
@@ -840,6 +848,7 @@ def create_model(
             metadata=metadata,
             node_input_dims=node_input_dims,
             attn_only=attn_only,
+            oversmoothing_config=oversmoothing_config,
         )
     else:
         raise ValueError("Unknown mpnn_type: {0}".format(mpnn_type))

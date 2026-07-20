@@ -49,6 +49,7 @@ class HeteroHGTStack(HeteroBase):
 
     def forward(self, data):
         self._maybe_init_metadata(data)
+        self._reset_oversmoothing_metrics()
 
         x_dict = data.x_dict
         self._ensure_node_embedders(x_dict)
@@ -58,6 +59,7 @@ class HeteroHGTStack(HeteroBase):
         }
 
         batch_dict = self._get_batch_dict(data, x_dict)
+        self._record_oversmoothing(-1, x_dict, data.edge_index_dict, batch_dict)
 
         node_heads = self.config_heads.get("node", [])
         if node_heads and node_heads[0]["architecture"]["type"] == "conv":
@@ -65,7 +67,9 @@ class HeteroHGTStack(HeteroBase):
                 "HeteroHGTStack does not support conv-based node heads. Use 'mlp' or 'mlp_per_node'."
             )
 
-        for conv, node_norms in zip(self.graph_convs, self.feature_layers):
+        for ilayer, (conv, node_norms) in enumerate(
+            zip(self.graph_convs, self.feature_layers)
+        ):
             if self.use_global_attn:
                 x_dict = conv(
                     x_dict,
@@ -80,6 +84,7 @@ class HeteroHGTStack(HeteroBase):
                 x = node_norms[node_type](x)
                 x = self.activation_function(x)
                 x_dict[node_type] = x
+            self._record_oversmoothing(ilayer, x_dict, data.edge_index_dict, batch_dict)
 
         return self._decode_from_x_dict(x_dict, batch_dict, data, edge_attr_dict=None)
 

@@ -187,6 +187,19 @@ def update_config(config, train_loader, val_loader, test_loader):
     if "precision" not in config["NeuralNetwork"]["Training"]:
         config["NeuralNetwork"]["Training"]["precision"] = "fp32"
 
+    if "Oversmoothing" not in config["NeuralNetwork"]["Training"]:
+        config["NeuralNetwork"]["Training"]["Oversmoothing"] = {
+            "enabled": False,
+            "every_n_batches": 1,
+            "node_types": None,
+            "edge_types": None,
+            "metrics": [
+                "feature_variance",
+                "mean_cos_to_centroid",
+                "dirichlet_energy",
+            ],
+        }
+
     return config
 
 

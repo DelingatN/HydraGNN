@@ -149,6 +149,7 @@ class HeteroHEATStack(HeteroBase):
 
     def forward(self, data):
         self._maybe_init_metadata(data)
+        self._reset_oversmoothing_metrics()
 
         x_dict = data.x_dict
         self._ensure_node_embedders(x_dict)
@@ -159,6 +160,7 @@ class HeteroHEATStack(HeteroBase):
 
         batch_dict = self._get_batch_dict(data, x_dict)
         edge_attr_dict = self._get_edge_attr_dict(data)
+        self._record_oversmoothing(-1, x_dict, data.edge_index_dict, batch_dict)
 
         node_heads = self.config_heads.get("node", [])
         if node_heads and node_heads[0]["architecture"]["type"] == "conv":
@@ -179,7 +181,9 @@ class HeteroHEATStack(HeteroBase):
                     self.edge_lin_dict[str(edge_type)](edge_attr)
                 )
 
-        for conv, node_norms in zip(self.graph_convs, self.feature_layers):
+        for ilayer, (conv, node_norms) in enumerate(
+            zip(self.graph_convs, self.feature_layers)
+        ):
             if self.use_global_attn:
                 x_dict = conv(
                     x_dict,
@@ -198,6 +202,7 @@ class HeteroHEATStack(HeteroBase):
                 x = node_norms[node_type](x)
                 x = self.activation_function(x)
                 x_dict[node_type] = x
+            self._record_oversmoothing(ilayer, x_dict, data.edge_index_dict, batch_dict)
 
         return self._decode_from_x_dict(x_dict, batch_dict, data, edge_attr_dict=None)
 

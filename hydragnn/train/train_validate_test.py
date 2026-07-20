@@ -337,7 +337,8 @@ def train_validate_test(
         with profiler as prof:
             tr.enable()
             tr.start("train")
-            train_loss, train_taskserr = train(
+            collect_train_oversmoothing = _model_logs_oversmoothing(model)
+            train_result = train(
                 train_loader,
                 model,
                 optimizer,
@@ -347,7 +348,13 @@ def train_validate_test(
                 use_deepspeed=use_deepspeed,
                 compute_grad_energy=compute_grad_energy,
                 precision=precision,
+                collect_oversmoothing=collect_train_oversmoothing,
             )
+            if collect_train_oversmoothing:
+                train_loss, train_taskserr, train_oversmoothing = train_result
+            else:
+                train_loss, train_taskserr = train_result
+                train_oversmoothing = {}
             tr.stop("train")
             tr.disable()
             if epoch == 0:
@@ -389,6 +396,8 @@ def train_validate_test(
                 writer.add_scalar(
                     "train error of task" + str(ivar), train_taskserr[ivar], epoch
                 )
+            for name, value in sorted(train_oversmoothing.items()):
+                writer.add_scalar("oversmoothing/train/" + name, value, epoch)
         print_distributed(
             verbosity,
             f"Epoch: {epoch:02d}, Train Loss: {train_loss:.8f}, Val Loss: {val_loss:.8f}, "
@@ -598,6 +607,70 @@ def reduce_values_ranks(local_tensor):
         return reduce_values_ranks_dist(local_tensor)
 
 
+def _get_oversmoothing_metric_owner(model):
+    inner = model.module if hasattr(model, "module") else model
+    seen = set()
+    while inner is not None and id(inner) not in seen:
+        seen.add(id(inner))
+        if hasattr(inner, "last_oversmoothing_metrics"):
+            return inner
+        inner = getattr(inner, "model", None)
+    return None
+
+
+def _get_oversmoothing_metrics(model):
+    owner = _get_oversmoothing_metric_owner(model)
+    if owner is None:
+        return {}
+    return getattr(owner, "last_oversmoothing_metrics", {}) or {}
+
+
+def _model_logs_oversmoothing(model):
+    owner = _get_oversmoothing_metric_owner(model)
+    if owner is None:
+        return False
+    return bool(getattr(owner, "log_oversmoothing", False))
+
+
+@torch.no_grad()
+def _reduce_metric_sums_ranks(local_sums, local_counts):
+    device = get_device()
+    local_keys = sorted(local_sums.keys())
+    if dist.is_available() and dist.is_initialized() and dist.get_world_size() > 1:
+        keys_by_rank = [None for _ in range(dist.get_world_size())]
+        dist.all_gather_object(keys_by_rank, local_keys)
+        keys = sorted({key for rank_keys in keys_by_rank for key in rank_keys})
+    else:
+        if not local_sums:
+            return {}
+        keys = local_keys
+
+    if not keys:
+        return {}
+
+    reduced = {}
+    for key in keys:
+        value = local_sums.get(key)
+        count = local_counts.get(key)
+        if value is None:
+            value = torch.tensor(0.0, device=device)
+        else:
+            value = value.detach().to(device=device, dtype=torch.float32)
+        if count is None:
+            count = torch.tensor(0.0, device=device)
+        else:
+            count = count.detach().to(device=device, dtype=torch.float32)
+
+        if dist.is_available() and dist.is_initialized() and dist.get_world_size() > 1:
+            dist.all_reduce(value, op=dist.ReduceOp.SUM)
+            dist.all_reduce(count, op=dist.ReduceOp.SUM)
+
+        if float(count.item()) > 0:
+            reduced[key] = float((value / count).item())
+
+    return reduced
+
+
 @torch.no_grad()
 def gather_tensor_ranks(head_values):
     if dist.get_world_size() > 1:
@@ -649,6 +722,7 @@ def train(
     use_deepspeed=False,
     compute_grad_energy=False,
     precision="fp32",
+    collect_oversmoothing=False,
 ):
     if profiler is None:
         profiler = Profiler()
@@ -658,6 +732,8 @@ def train(
 
     total_error = torch.tensor(0.0, device=get_device())
     tasks_error = torch.zeros(num_tasks, device=get_device())
+    oversmoothing_sums = {}
+    oversmoothing_counts = {}
     num_samples_local = 0
     model.train()
 
@@ -794,6 +870,20 @@ def train(
             num_samples_local += data.num_graphs
             for itask in range(len(tasks_loss)):
                 tasks_error[itask] += tasks_loss[itask] * data.num_graphs
+            if collect_oversmoothing:
+                sample_count = torch.tensor(
+                    float(data.num_graphs),
+                    device=get_device(),
+                    dtype=torch.float32,
+                )
+                for key, value in _get_oversmoothing_metrics(model).items():
+                    value = value.detach().to(device=get_device(), dtype=torch.float32)
+                    oversmoothing_sums[key] = oversmoothing_sums.get(
+                        key, torch.tensor(0.0, device=get_device())
+                    ) + value * sample_count
+                    oversmoothing_counts[key] = oversmoothing_counts.get(
+                        key, torch.tensor(0.0, device=get_device())
+                    ) + sample_count
         if ibatch < (nbatch - 1):
             tr.start("dataload", **syncopt)
         if use_ddstore:
@@ -810,7 +900,13 @@ def train(
 
     train_error = reduce_values_ranks(train_error)
     tasks_error = reduce_values_ranks(tasks_error)
+    oversmoothing_metrics = _reduce_metric_sums_ranks(
+        oversmoothing_sums,
+        oversmoothing_counts,
+    )
 
+    if collect_oversmoothing:
+        return train_error, tasks_error, oversmoothing_metrics
     return train_error, tasks_error
 
 

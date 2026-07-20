@@ -20,6 +20,7 @@ from torch_geometric.nn import (
 )
 
 from hydragnn.utils.model import activation_function_selection, loss_function_selection
+from hydragnn.utils.model.oversmoothing import compute_hetero_oversmoothing_metrics
 from hydragnn.utils.distributed import get_device
 from hydragnn.models.Base import MLPNode
 from hydragnn.globalAtt.Hetero_gps import HeteroGPSConv
@@ -63,6 +64,7 @@ class HeteroBase(Module):
         node_input_dims: dict | None = None,
         metadata=None,
         attn_only: bool = False,
+        oversmoothing_config: dict | None = None,
     ):
         super().__init__()
 
@@ -90,6 +92,24 @@ class HeteroBase(Module):
         self.global_attn_type = global_attn_type
         self.global_attn_heads = global_attn_heads
         self.attn_only = bool(attn_only)
+        oversmoothing_config = oversmoothing_config or {}
+        self.log_oversmoothing = bool(oversmoothing_config.get("enabled", False))
+        self.oversmoothing_every_n_batches = max(
+            1, int(oversmoothing_config.get("every_n_batches", 1))
+        )
+        self.oversmoothing_node_types = oversmoothing_config.get("node_types", None)
+        self.oversmoothing_edge_types = oversmoothing_config.get("edge_types", None)
+        self.oversmoothing_metrics = oversmoothing_config.get(
+            "metrics",
+            [
+                "feature_variance",
+                "mean_cos_to_centroid",
+                "dirichlet_energy",
+            ],
+        )
+        self.last_oversmoothing_metrics = {}
+        self._oversmoothing_forward_count = 0
+        self._collect_oversmoothing_this_forward = False
 
         self.heads_NN = ModuleList()
         self.config_heads = config_heads
@@ -214,6 +234,30 @@ class HeteroBase(Module):
                 self.node_embedders[node_type] = self.node_embedders[node_type].to(
                     x.device
                 )
+
+    def _reset_oversmoothing_metrics(self):
+        self.last_oversmoothing_metrics = {}
+        self._collect_oversmoothing_this_forward = (
+            self.log_oversmoothing
+            and self._oversmoothing_forward_count % self.oversmoothing_every_n_batches
+            == 0
+        )
+        self._oversmoothing_forward_count += 1
+
+    def _record_oversmoothing(self, layer_idx, x_dict, edge_index_dict, batch_dict):
+        if not self._collect_oversmoothing_this_forward:
+            return
+        self.last_oversmoothing_metrics.update(
+            compute_hetero_oversmoothing_metrics(
+                x_dict,
+                edge_index_dict,
+                batch_dict,
+                layer_idx,
+                node_types=self.oversmoothing_node_types,
+                edge_types=self.oversmoothing_edge_types,
+                metrics=self.oversmoothing_metrics,
+            )
+        )
 
     def _maybe_init_metadata(self, data):
         if self._metadata is None:
@@ -706,11 +750,17 @@ class HeteroBase(Module):
                 if hasattr(store, "edge_attr") and store.edge_attr is not None:
                     store.edge_attr = store.edge_attr.to(device)
                     
+        self._reset_oversmoothing_metrics()
+
         x_dict, batch_dict = self._prepare_node_features(data)
         
         edge_attr_dict = self._get_edge_attr_dict(data)
 
-        for conv, node_norms in zip(self.graph_convs, self.feature_layers):
+        self._record_oversmoothing(-1, x_dict, data.edge_index_dict, batch_dict)
+
+        for ilayer, (conv, node_norms) in enumerate(
+            zip(self.graph_convs, self.feature_layers)
+        ):
             if self.use_global_attn:
                 x_dict = conv(
                     x_dict,
@@ -727,6 +777,7 @@ class HeteroBase(Module):
                 x = node_norms[node_type](x)
                 x = self.activation_function(x)
                 x_dict[node_type] = x
+            self._record_oversmoothing(ilayer, x_dict, data.edge_index_dict, batch_dict)
         return self._decode_from_x_dict(x_dict, batch_dict, data, edge_attr_dict)
 
     def _decode_from_x_dict(self, x_dict, batch_dict, data, edge_attr_dict):

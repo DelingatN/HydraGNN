@@ -60,6 +60,20 @@
                 "voltage_bound_feature_indices": [2, 3],
                 "voltage_output_index": -1
             },
+            "Oversmoothing": {
+                "enabled": false,
+                "every_n_batches": 1,
+                "node_types": ["bus"],
+                "edge_types": [
+                    ["bus", "ac_line", "bus"],
+                    ["bus", "transformer", "bus"]
+                ],
+                "metrics": [
+                    "feature_variance",
+                    "mean_cos_to_centroid",
+                    "dirichlet_energy"
+                ]
+            },
             "Optimizer": {
                 "type": "AdamW",
                 "learning_rate": 1e-3
