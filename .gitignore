@@ -9,3 +9,11 @@ serialized_dataset/
 exporter.log
 *.doc
 *.docx
+  **/logs/
+  **/serialized_dataset/
+  *.h5
+  *.hdf5
+  *.pickle
+  *.pkl
+  *.bp/
+  *.bp
