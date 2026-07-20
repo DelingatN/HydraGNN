@@ -6,7 +6,7 @@
         "Architecture": {
             "mpnn_type": "HeteroSAGE",
             "hidden_dim": 64,
-            "num_conv_layers": 16,
+            "num_conv_layers": 4,
             "pe_dim": 0,
             "max_neighbours": 100,
             "global_attn_engine": "GPS",

@@ -9,11 +9,12 @@ serialized_dataset/
 exporter.log
 *.doc
 *.docx
-  **/logs/
-  **/serialized_dataset/
-  *.h5
-  *.hdf5
-  *.pickle
-  *.pkl
-  *.bp/
-  *.bp
+**/logs/
+**/serialized_dataset/
+*.h5
+*.hdf5
+*.pickle
+*.pkl
+*.bp/
+*.bp
+installation_DOE_supercomputers/HydraGNN-Installation-Frontier/

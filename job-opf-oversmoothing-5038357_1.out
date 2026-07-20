@@ -1,0 +1,1440 @@
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+DefApps:
+   ROCm/5.x modules and HPE/Cray Programming Environment (CPE) versions <=
+   23.12 were removed on July 1, 2026. For more information regarding the
+   removal, please see https://docs.olcf.ornl.gov/software/software-news.html#frontier-software-changes-july-1-2026
+
+-------------------------------------------------------------------------------
+
+
+The following have been reloaded with a version change:
+  1) PrgEnv-cray/8.6.0 => PrgEnv-cray/8.5.0
+  2) cce/18.0.1 => cce/18.0.0
+  3) cray-libsci/24.11.0 => cray-libsci/24.07.0
+  4) cray-mpich/8.1.31 => cray-mpich/8.1.30
+  5) cray-pmi/6.1.15 => cray-pmi/6.1.15.21
+  6) craype/2.7.33 => craype/2.7.32
+  7) darshan-runtime/3.4.6-mpi => darshan-runtime/3.4.4-mpi
+  8) perftools-base/24.11.0 => perftools-base/24.07.0
+
+Lmod Warning:
+================================================================================
+
+    Mixed compiler modules are being deprecated in a future release.
+    For more information run: module help amd-mixed
+
+================================================================================
+
+
+While processing the following module(s):
+    Module fullname  Module Filename
+    ---------------  ---------------
+    amd-mixed/7.1.1  /opt/cray/pe/lmod/modulefiles/mix_compilers/amd-mixed/7.1.1.lua
+
+
+Lmod is automatically replacing "cce/18.0.0" with "gcc-native/13.2".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.5.0" with "PrgEnv-gnu/8.5.0".
+
+Lmod Warning:
+================================================================================
+
+    Mixed compiler modules are being deprecated in a future release.
+    For more information run: module help amd-mixed
+
+================================================================================
+
+
+While processing the following module(s):
+    Module fullname  Module Filename
+    ---------------  ---------------
+    amd-mixed/7.1.1  /opt/cray/pe/lmod/modulefiles/mix_compilers/amd-mixed/7.1.1.lua
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.07.0     2) cray-mpich/8.1.30     3) darshan-runtime/3.4.4-mpi
+
+Lmod Warning:
+================================================================================
+
+    Mixed compiler modules are being deprecated in a future release.
+    For more information run: module help amd-mixed
+
+================================================================================
+
+
+While processing the following module(s):
+    Module fullname  Module Filename
+    ---------------  ---------------
+    amd-mixed/7.1.1  /opt/cray/pe/lmod/modulefiles/mix_compilers/amd-mixed/7.1.1.lua
+
+/lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/installation_DOE_supercomputers/HydraGNN-Installation-Frontier/hydragnn_venv/bin/python3.11
+2.10.2 /lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/installation_DOE_supercomputers/HydraGNN-Installation-Frontier/hydragnn_venv/lib/python3.11/site-packages/adios2/__init__.py
+2.12.1+rocm7.1 /lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/installation_DOE_supercomputers/HydraGNN-Installation-Frontier/hydragnn_venv/lib/python3.11/site-packages/torch/__init__.py
+
+Note: the module "darshan-runtime" cannot be unloaded because it was not
+loaded.
+
+Lmod Warning:
+================================================================================
+
+    Mixed compiler modules are being deprecated in a future release.
+    For more information run: module help amd-mixed
+
+================================================================================
+
+
+While processing the following module(s):
+    Module fullname  Module Filename
+    ---------------  ---------------
+    amd-mixed/7.1.1  /opt/cray/pe/lmod/modulefiles/mix_compilers/amd-mixed/7.1.1.lua
+
+
+Currently Loaded Modules:
+  1) craype-x86-trento                13) rocm/7.1.1
+  2) libfabric/2.3.1                  14) amd-mixed/7.1.1
+  3) craype-network-ofi               15) craype-accel-amd-gfx90a
+  4) xpmem/1.0.1-1.5_1_gfb6998056825  16) gcc-native/13.2
+  5) Core/25.03                       17) craype/2.7.32
+  6) tmux/3.4                         18) cray-dsmml/0.3.0
+  7) hsi/default                      19) cray-mpich/8.1.30
+  8) lfs-wrapper/0.0.1                20) cray-libsci/24.07.0
+  9) DefApps                          21) PrgEnv-gnu/8.5.0
+ 10) cray-pmi/6.1.15.21               22) miniforge3/23.11.0-0
+ 11) perftools-base/24.07.0           23) git-lfs/3.5.1
+ 12) cpe/24.07
+
+ 
+
+/opt/rocm-7.1.1/lib
+/opt/rocm-7.1.1/llvm/lib
+/opt/rocm-7.1.1/lib/roctracer
+/opt/rocm-7.1.1/lib/rocprofiler
+/opt/cray/pe/papi/7.1.0.2/lib64
+/opt/cray/libfabric/2.3.1/lib64
+PE_PRODUCT_LIST=CRAYPE:CRAY_PMI:CRAYPE_X86_TRENTO:PERFTOOLS:CRAYPAT:CRAY_ROCM:CRAY_ACCEL
+ROCM_PATH=/opt/rocm-7.1.1
+CRAY_ROCM_POST_LINK_OPTS= -L/opt/rocm-7.1.1/lib -L/opt/rocm-7.1.1/lib/rocprofiler -L/opt/rocm-7.1.1/lib/roctracer -lamdhip64
+CRAY_ROCM_PREFIX=/opt/rocm-7.1.1
+CRAY_ROCM_DIR=/opt/rocm-7.1.1
+CRAY_ROCM_VERSION=7.1.1
+CRAY_ROCM_INCLUDE_OPTS=-I/opt/rocm-7.1.1/include -I/opt/rocm-7.1.1/include/rocprofiler -I/opt/rocm-7.1.1/include/roctracer -I/opt/rocm-7.1.1/include/hip -D__HIP_PLATFORM_AMD__
+__LMOD_REF_COUNT_PE_PRODUCT_LIST=CRAYPE:1;CRAY_PMI:1;CRAYPE_X86_TRENTO:1;PERFTOOLS:1;CRAYPAT:1;CRAY_ROCM:1;CRAY_ACCEL:1
+MINICOM=-c on
+MPICH_OFI_NIC_POLICY=NUMA
+MPICH_DIR=/opt/cray/pe/mpich/8.1.30/ofi/gnu/12.3
+HYDRA_LAUNCHER_EXTRA_ARGS=--external-launcher
+HYDRA_BOOTSTRAP=slurm
+/lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/installation_DOE_supercomputers/HydraGNN-Installation-Frontier/hydragnn_venv/bin/python3.11
+1.26.4
+
+============================================================
+ HydraGNN oversmoothing array training
+ Array task  : 1 / 2
+ Config      : oversmoothing_configs/16_heteroheat_depth_01_no_gps.json
+ Run name    : 16_heteroheat_depth_01_no_gps-5038357-1
+ Case        : pglib_opf_case14_ieee
+ Nodes       : 2
+ GPUs/ranks  : 16
+ Epochs      : 2
+ Batch size  : 32
+============================================================
+
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574359.005104 1223385 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574359.005145 1223386 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574359.005090 1223387 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574359.005108 1223388 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574359.005101 1223389 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574359.005121 1223382 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574359.005133 1223383 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574359.005137 1223384 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+I0000 00:00:1784574360.052575 1223382 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1784574360.052586 1223384 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1784574360.052585 1223385 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1784574360.052563 1223387 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1784574360.052565 1223388 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1784574360.052591 1223389 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1784574360.052598 1223383 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1784574360.052617 1223386 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574360.768171 2643863 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574360.768151 2643867 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574360.768191 2643864 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574360.768174 2643865 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574360.768161 2643866 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574360.768206 2643868 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574360.768189 2643869 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574360.768181 2643862 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+I0000 00:00:1784574361.114158 2643863 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1784574361.114135 2643864 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1784574361.114161 2643866 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1784574361.114145 2643867 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1784574361.114158 2643868 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1784574361.114141 2643869 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1784574361.114169 2643862 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1784574361.114217 2643865 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574363.877618 1223382 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574363.877601 1223383 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574363.877662 1223384 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574363.877610 1223385 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574363.877589 1223386 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574363.877637 1223387 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574363.877656 1223388 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574363.877586 1223389 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574364.496948 2643862 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574364.497005 2643863 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574364.496952 2643864 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574364.496940 2643865 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574364.496969 2643866 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574364.496979 2643867 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574364.496958 2643868 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1784574364.497020 2643869 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Distributed data parallel: nccl master at 10.128.132.200:48359
+[W720 15:06:07.784085024 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+[W720 15:06:07.784027194 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+[W720 15:06:07.784041461 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+[W720 15:06:07.784051019 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+[W720 15:06:07.786168080 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+[W720 15:06:07.787045780 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+[W720 15:06:07.788526670 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+[W720 15:06:07.788497083 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+INFO (rank 2): trainset,valset,testset size: 270000 15000 15000
+INFO (rank 3): trainset,valset,testset size: 270000 15000 15000
+INFO (rank 4): trainset,valset,testset size: 270000 15000 15000
+INFO (rank 1): trainset,valset,testset size: 270000 15000 15000
+INFO (rank 7): trainset,valset,testset size: 270000 15000 15000
+INFO (rank 5): trainset,valset,testset size: 270000 15000 15000
+INFO (rank 6): trainset,valset,testset size: 270000 15000 15000
+[W720 15:06:07.210154290 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+[W720 15:06:07.210175870 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+[W720 15:06:07.210913469 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+[W720 15:06:07.211445597 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+[W720 15:06:07.212088075 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+[W720 15:06:07.212769637 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+[W720 15:06:07.213326483 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+[W720 15:06:07.213903036 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier08493.frontier.olcf.ornl.gov]:48359 (errno: 97 - Address family not supported by protocol).
+INFO (rank 0): HDF5 training mode: skipping OPF case discovery/download/split preparation.
+INFO (rank 0): trainset,valset,testset size: 270000 15000 15000
+INFO (rank 12): trainset,valset,testset size: 270000 15000 15000
+INFO (rank 15): trainset,valset,testset size: 270000 15000 15000
+INFO (rank 8): trainset,valset,testset size: 270000 15000 15000
+INFO (rank 10): trainset,valset,testset size: 270000 15000 15000
+INFO (rank 11): trainset,valset,testset size: 270000 15000 15000
+INFO (rank 13): trainset,valset,testset size: 270000 15000 15000
+INFO (rank 9): trainset,valset,testset size: 270000 15000 15000
+INFO (rank 14): trainset,valset,testset size: 270000 15000 15000
+0: Using GPU
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+INFO (rank 0): [DomainLoss] config (enabled=True): smoothness_weight=0.001, transformer_smoothness_weight=0.001, voltage_bound_weight=0.01, voltage_bound_feature_indices=[2, 3], voltage_output_index=-1
+INFO (rank 0): [DomainLoss] Wrapping model with OPFEnhancedModelWrapper.
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+0: CPUs, NVIDIA, and AMD GPUs do not need optimize wrapper
+0: EnhancedModelWrapper detected: OPFEnhancedModelWrapper
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+0: Applying DDP optimizations: find_unused_parameters=True, gradient_as_bucket_view=False
+0: Using GPU
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+[diag][rank 0][3339152.930] Entering print_model
+0: module.model.graph_convs.0.heat_conv.hetero_lin.weight	         [4, 64, 64]	     16384
+0: module.model.graph_convs.0.heat_conv.hetero_lin.bias	             [4, 64]	       256
+0: module.model.graph_convs.0.heat_conv.edge_type_emb.weight	             [8, 16]	       128
+0: module.model.graph_convs.0.heat_conv.edge_attr_emb.weight	            [16, 64]	      1024
+0:    module.model.graph_convs.0.heat_conv.att.weight	            [4, 160]	       640
+0:    module.model.graph_convs.0.heat_conv.lin.weight	            [64, 80]	      5120
+0:      module.model.graph_convs.0.heat_conv.lin.bias	                [64]	        64
+0:    module.model.feature_layers.0.bus.module.weight	                [64]	        64
+0:      module.model.feature_layers.0.bus.module.bias	                [64]	        64
+0: module.model.feature_layers.0.bus.module.running_mean	                [64]	        64
+0: module.model.feature_layers.0.bus.module.running_var	                [64]	        64
+0: module.model.feature_layers.0.bus.module.num_batches_tracked	                  []	         1
+0: module.model.feature_layers.0.generator.module.weight	                [64]	        64
+0: module.model.feature_layers.0.generator.module.bias	                [64]	        64
+0: module.model.feature_layers.0.generator.module.running_mean	                [64]	        64
+0: module.model.feature_layers.0.generator.module.running_var	                [64]	        64
+0: module.model.feature_layers.0.generator.module.num_batches_tracked	                  []	         1
+0:   module.model.feature_layers.0.load.module.weight	                [64]	        64
+0:     module.model.feature_layers.0.load.module.bias	                [64]	        64
+0: module.model.feature_layers.0.load.module.running_mean	                [64]	        64
+0: module.model.feature_layers.0.load.module.running_var	                [64]	        64
+0: module.model.feature_layers.0.load.module.num_batches_tracked	                  []	         1
+0:  module.model.feature_layers.0.shunt.module.weight	                [64]	        64
+0:    module.model.feature_layers.0.shunt.module.bias	                [64]	        64
+0: module.model.feature_layers.0.shunt.module.running_mean	                [64]	        64
+0: module.model.feature_layers.0.shunt.module.running_var	                [64]	        64
+0: module.model.feature_layers.0.shunt.module.num_batches_tracked	                  []	         1
+0:             module.model.node_embedders.bus.weight	             [64, 4]	       256
+0:               module.model.node_embedders.bus.bias	                [64]	        64
+0:       module.model.node_embedders.generator.weight	            [64, 11]	       704
+0:         module.model.node_embedders.generator.bias	                [64]	        64
+0:            module.model.node_embedders.load.weight	             [64, 2]	       128
+0:              module.model.node_embedders.load.bias	                [64]	        64
+0:           module.model.node_embedders.shunt.weight	             [64, 2]	       128
+0:             module.model.node_embedders.shunt.bias	                [64]	        64
+0:    module.model.heads_NN.0.branch-0.mlp.0.0.weight	            [32, 64]	      2048
+0:      module.model.heads_NN.0.branch-0.mlp.0.0.bias	                [32]	        32
+0:    module.model.heads_NN.0.branch-0.mlp.0.2.weight	            [16, 32]	       512
+0:      module.model.heads_NN.0.branch-0.mlp.0.2.bias	                [16]	        16
+0:    module.model.heads_NN.0.branch-0.mlp.0.4.weight	             [2, 16]	        32
+0:      module.model.heads_NN.0.branch-0.mlp.0.4.bias	                 [2]	         2
+0: --------------------------------------------------
+0:                                              Total	                    	     28758
+0: All (total, MB): 28758 0.109718
+[diag][rank 0][3339152.934] Exited print_model
+[diag][rank 0][3339152.934] Entering load_existing_model_config
+[diag][rank 0][3339152.934] Exited load_existing_model_config
+[diag][rank 0][3339152.934] Entering train_validate_test
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 0.169115648 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Epoch: 00, Train Loss: 0.03310503, Val Loss: 0.00044206, Test Loss: 0.00044009
+0: Tasks Train Loss: [0.031694065779447556]
+0: Tasks Val Loss: [0.0004420621844474226]
+0: Tasks Test Loss: [0.00044009083649143577]
+/lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/installation_DOE_supercomputers/HydraGNN-Installation-Frontier/hydragnn_venv/lib/python3.11/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+0: Creating Checkpoint: 0.000442
+0: Best Performance Metric: 0.000442
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+0: LossBreakdown epoch=00  data_driven_mse=0.02847103  curriculum_scale=1.00000000  physics_penalty_total=0.00126541  raw_voltage_bound=0.04305223
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 0.169359872 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Max memory allocated after optimizer step: 0.169362944 GB 0.186646528 GB
+0: Epoch: 01, Train Loss: 0.00462090, Val Loss: 0.00058928, Test Loss: 0.00058721
+0: Tasks Train Loss: [0.0012679063947871327]
+0: Tasks Val Loss: [0.0005892826011404395]
+0: Tasks Test Loss: [0.0005872070323675871]
+0: Best Performance Metric: 0.000442
+[diag][rank 0][3339272.462] Exited train_validate_test
+0: LossBreakdown epoch=01  data_driven_mse=0.00119767  curriculum_scale=1.00000000  physics_penalty_total=0.00300711  raw_voltage_bound=0.00020206
+0: Process 0 - Local timer:  train_validate_test  :  119.5
+0: Process 0 - Local timer:  create_model  :  0.04
+0: Minimum timers: 
+0: train_validate_test  :  119.48
+0: create_model  :  0.04
+0: Maximum timers: 
+0: train_validate_test  :  119.5
+0: create_model  :  0.05
+0: Average timers: 
+0: train_validate_test  :  119.49
+0: create_model  :  0.04
+0: Number of calls to timers: 
+0: {'create_model': 1, 'train_validate_test': 1}

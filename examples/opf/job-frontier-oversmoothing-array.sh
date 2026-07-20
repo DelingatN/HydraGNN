@@ -6,7 +6,7 @@
 #SBATCH -e /lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/job-opf-oversmoothing-%A_%a.out
 #SBATCH -t 00:10:00
 #SBATCH -p batch
-#SBATCH -N 1
+#SBATCH -N 2
 #SBATCH --array=0-20
 ##SBATCH -C nvme
 ##SBATCH -S 1
@@ -81,26 +81,26 @@ which "$PYTHON_BIN"
 "$PYTHON_BIN" -c "import numpy; print(numpy.__version__)"
 
 CONFIG_FILES=(
-    "oversmoothing_configs/01_heterogin_no_gps.json"
-    "oversmoothing_configs/02_heterogin_gps.json"
-    "oversmoothing_configs/03_heterosage_no_gps.json"
-    "oversmoothing_configs/04_heterosage_gps.json"
-    "oversmoothing_configs/05_heterogat_no_gps.json"
-    "oversmoothing_configs/06_heterogat_gps.json"
-    "oversmoothing_configs/07_heteropna_no_gps.json"
-    "oversmoothing_configs/08_heteropna_gps.json"
-    "oversmoothing_configs/09_heterorgat_no_gps.json"
-    "oversmoothing_configs/10_heterorgat_gps.json"
-    "oversmoothing_configs/11_heterohgt_no_gps.json"
-    "oversmoothing_configs/12_heterohgt_gps.json"
-    "oversmoothing_configs/13_heteroheat_no_gps.json"
-    "oversmoothing_configs/14_heteroheat_gps.json"
+    # "oversmoothing_configs/01_heterogin_no_gps.json"
+    # "oversmoothing_configs/02_heterogin_gps.json"
+    # "oversmoothing_configs/03_heterosage_no_gps.json"
+    # "oversmoothing_configs/04_heterosage_gps.json"
+    # "oversmoothing_configs/05_heterogat_no_gps.json"
+    # "oversmoothing_configs/06_heterogat_gps.json"
+    # "oversmoothing_configs/07_heteropna_no_gps.json"
+    # "oversmoothing_configs/08_heteropna_gps.json"
+    # "oversmoothing_configs/09_heterorgat_no_gps.json"
+    # "oversmoothing_configs/10_heterorgat_gps.json"
+    # "oversmoothing_configs/11_heterohgt_no_gps.json"
+    # "oversmoothing_configs/12_heterohgt_gps.json"
+    # "oversmoothing_configs/13_heteroheat_no_gps.json"
+    # "oversmoothing_configs/14_heteroheat_gps.json"
     "oversmoothing_configs/15_heterosage_attention_only_gps.json"
     "oversmoothing_configs/16_heteroheat_depth_01_no_gps.json"
-    "oversmoothing_configs/17_heteroheat_depth_02_no_gps.json"
-    "oversmoothing_configs/18_heteroheat_depth_04_no_gps.json"
-    "oversmoothing_configs/19_heteroheat_depth_08_no_gps.json"
-    "oversmoothing_configs/20_heteroheat_depth_12_no_gps.json"
+    # "oversmoothing_configs/17_heteroheat_depth_02_no_gps.json"
+    # "oversmoothing_configs/18_heteroheat_depth_04_no_gps.json"
+    # "oversmoothing_configs/19_heteroheat_depth_08_no_gps.json"
+    # "oversmoothing_configs/20_heteroheat_depth_12_no_gps.json"
     "oversmoothing_configs/21_heteroheat_depth_16_no_gps.json"
 )
 
