@@ -237,6 +237,18 @@ class HeteroBase(Module):
                     x.device
                 )
 
+    def _prepare_node_features(self, data):
+        device = next(self.parameters()).device
+        x_dict = {
+            node_type: x.to(device) for node_type, x in data.x_dict.items()
+        }
+        self._ensure_node_embedders(x_dict)
+        x_dict = {
+            node_type: self.node_embedders[node_type](x.float())
+            for node_type, x in x_dict.items()
+        }
+        return x_dict, self._get_batch_dict(data, x_dict)
+
     def _reset_oversmoothing_metrics(self):
         self.last_oversmoothing_metrics = {}
         self._collect_oversmoothing_this_forward = (
@@ -765,11 +777,11 @@ class HeteroBase(Module):
                     store.edge_index = store.edge_index.to(device)
                 if hasattr(store, "edge_attr") and store.edge_attr is not None:
                     store.edge_attr = store.edge_attr.to(device)
-                    
+
         self._reset_oversmoothing_metrics()
 
         x_dict, batch_dict = self._prepare_node_features(data)
-        
+
         edge_attr_dict = self._get_edge_attr_dict(data)
 
         self._record_oversmoothing(-1, x_dict, data.edge_index_dict, batch_dict)
