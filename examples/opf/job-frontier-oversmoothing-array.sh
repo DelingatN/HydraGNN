@@ -4,9 +4,9 @@
 #SBATCH -J opf-oversmoothing
 #SBATCH -o /lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/job-opf-oversmoothing-%A_%a.out
 #SBATCH -e /lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/job-opf-oversmoothing-%A_%a.out
-#SBATCH -t 00:10:00
+#SBATCH -t 02:00:00
 #SBATCH -p batch
-#SBATCH -N 2
+#SBATCH -N 4
 #SBATCH --array=0-20
 ##SBATCH -C nvme
 ##SBATCH -S 1
@@ -81,27 +81,27 @@ which "$PYTHON_BIN"
 "$PYTHON_BIN" -c "import numpy; print(numpy.__version__)"
 
 CONFIG_FILES=(
-    # "oversmoothing_configs/01_heterogin_no_gps.json"
-    # "oversmoothing_configs/02_heterogin_gps.json"
-    # "oversmoothing_configs/03_heterosage_no_gps.json"
-    # "oversmoothing_configs/04_heterosage_gps.json"
-    # "oversmoothing_configs/05_heterogat_no_gps.json"
-    # "oversmoothing_configs/06_heterogat_gps.json"
-    # "oversmoothing_configs/07_heteropna_no_gps.json"
-    # "oversmoothing_configs/08_heteropna_gps.json"
-    # "oversmoothing_configs/09_heterorgat_no_gps.json"
-    # "oversmoothing_configs/10_heterorgat_gps.json"
-    # "oversmoothing_configs/11_heterohgt_no_gps.json"
-    # "oversmoothing_configs/12_heterohgt_gps.json"
-    # "oversmoothing_configs/13_heteroheat_no_gps.json"
-    # "oversmoothing_configs/14_heteroheat_gps.json"
-    "oversmoothing_configs/15_heterosage_attention_only_gps.json"
-    "oversmoothing_configs/16_heteroheat_depth_01_no_gps.json"
-    # "oversmoothing_configs/17_heteroheat_depth_02_no_gps.json"
-    # "oversmoothing_configs/18_heteroheat_depth_04_no_gps.json"
-    # "oversmoothing_configs/19_heteroheat_depth_08_no_gps.json"
-    # "oversmoothing_configs/20_heteroheat_depth_12_no_gps.json"
-    "oversmoothing_configs/21_heteroheat_depth_16_no_gps.json"
+    "oversmoothing_configs/gin_n.json"
+    "oversmoothing_configs/gin_g.json"
+    "oversmoothing_configs/sage_n.json"
+    "oversmoothing_configs/sage_g.json"
+    "oversmoothing_configs/gat_n.json"
+    "oversmoothing_configs/gat_g.json"
+    "oversmoothing_configs/pna_n.json"
+    "oversmoothing_configs/pna_g.json"
+    "oversmoothing_configs/rgat_n.json"
+    "oversmoothing_configs/rgat_g.json"
+    "oversmoothing_configs/hgt_n.json"
+    "oversmoothing_configs/hgt_g.json"
+    "oversmoothing_configs/heat_n.json"
+    "oversmoothing_configs/heat_g.json"
+    "oversmoothing_configs/attn_only.json"
+    # "oversmoothing_configs/heat_01_n.json"
+    # "oversmoothing_configs/heat_02_n.json"
+    # "oversmoothing_configs/heat_04_n.json"
+    # "oversmoothing_configs/heat_08_n.json"
+    # "oversmoothing_configs/heat_12_n.json"
+    # "oversmoothing_configs/heat_16_n.json"
 )
 
 TASK_ID=${SLURM_ARRAY_TASK_ID:?Submit this script with sbatch.}
@@ -116,14 +116,14 @@ if [[ ! -f "$RUN_CONFIG" ]]; then
     exit 2
 fi
 
-CASE_NAME=${CASE_NAME:-pglib_opf_case14_ieee}
-MODEL_NAME=${MODEL_NAME:-case14}
+CASE_NAME=${CASE_NAME:-pglib_opf_case4661_sdet}
+MODEL_NAME=${MODEL_NAME:-case4661}
 NUM_GROUPS=${NUM_GROUPS:-1}
-EPOCHS=${EPOCHS:-2}
+EPOCHS=${EPOCHS:-50}
 BATCH_SIZE=${BATCH_SIZE:-32}
 
 CONFIG_NAME=$(basename "$RUN_CONFIG" .json)
-RUN_NAME=${RUN_NAME:-"${CONFIG_NAME}-${SLURM_ARRAY_JOB_ID}-${TASK_ID}"}
+RUN_NAME=${RUN_NAME:-"${CONFIG_NAME}-${MODEL_NAME}"}
 
 echo
 echo "============================================================"

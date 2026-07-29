@@ -1,0 +1,1811 @@
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+DefApps:
+   ROCm/5.x modules and HPE/Cray Programming Environment (CPE) versions <=
+   23.12 were removed on July 1, 2026. For more information regarding the
+   removal, please see https://docs.olcf.ornl.gov/software/software-news.html#frontier-software-changes-july-1-2026
+
+-------------------------------------------------------------------------------
+
+
+The following have been reloaded with a version change:
+  1) PrgEnv-cray/8.6.0 => PrgEnv-cray/8.5.0
+  2) cce/18.0.1 => cce/18.0.0
+  3) cray-libsci/24.11.0 => cray-libsci/24.07.0
+  4) cray-mpich/8.1.31 => cray-mpich/8.1.30
+  5) cray-pmi/6.1.15 => cray-pmi/6.1.15.21
+  6) craype/2.7.33 => craype/2.7.32
+  7) darshan-runtime/3.4.6-mpi => darshan-runtime/3.4.4-mpi
+  8) perftools-base/24.11.0 => perftools-base/24.07.0
+
+Lmod Warning:
+================================================================================
+
+    Mixed compiler modules are being deprecated in a future release.
+    For more information run: module help amd-mixed
+
+================================================================================
+
+
+While processing the following module(s):
+    Module fullname  Module Filename
+    ---------------  ---------------
+    amd-mixed/7.1.1  /opt/cray/pe/lmod/modulefiles/mix_compilers/amd-mixed/7.1.1.lua
+
+
+Lmod is automatically replacing "cce/18.0.0" with "gcc-native/13.2".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.5.0" with "PrgEnv-gnu/8.5.0".
+
+Lmod Warning:
+================================================================================
+
+    Mixed compiler modules are being deprecated in a future release.
+    For more information run: module help amd-mixed
+
+================================================================================
+
+
+While processing the following module(s):
+    Module fullname  Module Filename
+    ---------------  ---------------
+    amd-mixed/7.1.1  /opt/cray/pe/lmod/modulefiles/mix_compilers/amd-mixed/7.1.1.lua
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.07.0     2) cray-mpich/8.1.30     3) darshan-runtime/3.4.4-mpi
+
+Lmod Warning:
+================================================================================
+
+    Mixed compiler modules are being deprecated in a future release.
+    For more information run: module help amd-mixed
+
+================================================================================
+
+
+While processing the following module(s):
+    Module fullname  Module Filename
+    ---------------  ---------------
+    amd-mixed/7.1.1  /opt/cray/pe/lmod/modulefiles/mix_compilers/amd-mixed/7.1.1.lua
+
+/lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/installation_DOE_supercomputers/HydraGNN-Installation-Frontier/hydragnn_venv/bin/python3.11
+2.10.2 /lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/installation_DOE_supercomputers/HydraGNN-Installation-Frontier/hydragnn_venv/lib/python3.11/site-packages/adios2/__init__.py
+2.12.1+rocm7.1 /lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/installation_DOE_supercomputers/HydraGNN-Installation-Frontier/hydragnn_venv/lib/python3.11/site-packages/torch/__init__.py
+
+Note: the module "darshan-runtime" cannot be unloaded because it was not
+loaded.
+
+Lmod Warning:
+================================================================================
+
+    Mixed compiler modules are being deprecated in a future release.
+    For more information run: module help amd-mixed
+
+================================================================================
+
+
+While processing the following module(s):
+    Module fullname  Module Filename
+    ---------------  ---------------
+    amd-mixed/7.1.1  /opt/cray/pe/lmod/modulefiles/mix_compilers/amd-mixed/7.1.1.lua
+
+
+Currently Loaded Modules:
+  1) craype-x86-trento                13) rocm/7.1.1
+  2) libfabric/2.3.1                  14) amd-mixed/7.1.1
+  3) craype-network-ofi               15) craype-accel-amd-gfx90a
+  4) xpmem/1.0.1-1.5_1_gfb6998056825  16) gcc-native/13.2
+  5) Core/25.03                       17) craype/2.7.32
+  6) tmux/3.4                         18) cray-dsmml/0.3.0
+  7) hsi/default                      19) cray-mpich/8.1.30
+  8) lfs-wrapper/0.0.1                20) cray-libsci/24.07.0
+  9) DefApps                          21) PrgEnv-gnu/8.5.0
+ 10) cray-pmi/6.1.15.21               22) miniforge3/23.11.0-0
+ 11) perftools-base/24.07.0           23) git-lfs/3.5.1
+ 12) cpe/24.07
+
+ 
+
+/opt/rocm-7.1.1/lib
+/opt/rocm-7.1.1/llvm/lib
+/opt/rocm-7.1.1/lib/roctracer
+/opt/rocm-7.1.1/lib/rocprofiler
+/opt/cray/pe/papi/7.1.0.2/lib64
+/opt/cray/libfabric/2.3.1/lib64
+PE_PRODUCT_LIST=CRAYPE:CRAY_PMI:CRAYPE_X86_TRENTO:PERFTOOLS:CRAYPAT:CRAY_ROCM:CRAY_ACCEL
+ROCM_PATH=/opt/rocm-7.1.1
+CRAY_ROCM_POST_LINK_OPTS= -L/opt/rocm-7.1.1/lib -L/opt/rocm-7.1.1/lib/rocprofiler -L/opt/rocm-7.1.1/lib/roctracer -lamdhip64
+CRAY_ROCM_PREFIX=/opt/rocm-7.1.1
+CRAY_ROCM_DIR=/opt/rocm-7.1.1
+CRAY_ROCM_VERSION=7.1.1
+CRAY_ROCM_INCLUDE_OPTS=-I/opt/rocm-7.1.1/include -I/opt/rocm-7.1.1/include/rocprofiler -I/opt/rocm-7.1.1/include/roctracer -I/opt/rocm-7.1.1/include/hip -D__HIP_PLATFORM_AMD__
+__LMOD_REF_COUNT_PE_PRODUCT_LIST=CRAYPE:1;CRAY_PMI:1;CRAYPE_X86_TRENTO:1;PERFTOOLS:1;CRAYPAT:1;CRAY_ROCM:1;CRAY_ACCEL:1
+MINICOM=-c on
+MPICH_OFI_NIC_POLICY=NUMA
+MPICH_DIR=/opt/cray/pe/mpich/8.1.30/ofi/gnu/12.3
+HYDRA_LAUNCHER_EXTRA_ARGS=--external-launcher
+HYDRA_BOOTSTRAP=slurm
+/lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/installation_DOE_supercomputers/HydraGNN-Installation-Frontier/hydragnn_venv/bin/python3.11
+1.26.4
+
+============================================================
+ HydraGNN oversmoothing array training
+ Array task  : 8 / 14
+ Config      : oversmoothing_configs/rgat_n.json
+ Run name    : rgat_n-case2000
+ Case        : pglib_opf_case2000_goc
+ Nodes       : 4
+ GPUs/ranks  : 32
+ Epochs      : 50
+ Batch size  : 32
+============================================================
+
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320028.762436 1860595 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320028.762443 1860596 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320028.762413 1860598 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320028.762404 1860599 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320028.762395 1860600 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320028.762425 1860593 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320028.762423 1860594 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320028.762415 1860597 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+I0000 00:00:1785320029.070087 1860593 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320029.070111 1860594 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320029.070090 1860597 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320029.070112 1860600 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320029.070134 1860595 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320029.070121 1860596 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320029.070140 1860598 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320029.070117 1860599 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.751749 1632014 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.751808 1632016 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.751780 1632017 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.751752 1632018 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.751759 1632011 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.751793 1632012 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.751770 1632013 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.751767 1632015 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.752698  886552 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.752646  886553 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.752710  886554 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.752661  886555 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.752652  886556 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.752658  886557 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.752673  886558 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.752683  886559 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.798000 1450069 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.798012 1450071 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.798023 1450073 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.797990 1450074 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.797985 1450076 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.798027 1450070 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.798041 1450072 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320031.798004 1450075 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+I0000 00:00:1785320032.065362  886552 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.065341  886554 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.065349  886555 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.065342  886556 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.065356  886557 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.065478 1632016 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.065360  886558 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.065517 1632015 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.065381  886553 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.065512 1632017 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.065379  886559 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.065543 1632011 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.065563 1632012 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.065569 1632013 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.065540 1632014 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.065563 1632018 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320032.098723 1860593 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320032.098760 1860596 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320032.098753 1860600 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320032.098770 1860594 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320032.098791 1860595 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320032.098807 1860599 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320032.098831 1860597 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320032.098852 1860598 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+I0000 00:00:1785320032.116035 1450070 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.116036 1450071 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.116020 1450073 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.116026 1450074 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.116008 1450076 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.116049 1450069 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.116048 1450072 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785320032.116039 1450075 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Distributed data parallel: nccl master at 10.128.107.248:21459
+[W729 06:13:55.499034546 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:55.499058342 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:55.501399060 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:55.503747072 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:55.505363265 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:55.505993216 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:55.512668557 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:55.513345519 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+INFO (rank 1): trainset,valset,testset size: 13500 750 750
+INFO (rank 3): trainset,valset,testset size: 13500 750 750
+INFO (rank 4): trainset,valset,testset size: 13500 750 750
+INFO (rank 5): trainset,valset,testset size: 13500 750 750
+INFO (rank 2): trainset,valset,testset size: 13500 750 750
+INFO (rank 7): trainset,valset,testset size: 13500 750 750
+INFO (rank 6): trainset,valset,testset size: 13500 750 750
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.248023 1632011 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.248041 1632013 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.248025 1632015 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.248015 1632016 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.248017 1632017 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.248115 1632012 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.248112 1632014 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.248133 1632018 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.271224  886552 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.271209  886557 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.271258  886554 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.271238  886556 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.271240  886559 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.271318  886553 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.271302  886555 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.271245  886558 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.333995 1450070 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.334006 1450071 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.333973 1450072 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.334036 1450073 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.333979 1450074 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.333987 1450075 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.333989 1450076 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785320035.334021 1450069 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+[W729 06:13:58.611051061 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.611039679 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.779698519 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.779723207 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.779729399 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.626557193 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.631494266 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.795431454 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.634828661 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.638622885 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.639917408 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.803179351 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.642710326 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.439377057 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.439398369 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.439405773 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.439412386 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.442285537 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.451034351 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.455001614 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.822756557 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.825047914 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.825133119 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+[W729 06:13:58.462512778 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier06905.frontier.olcf.ornl.gov]:21459 (errno: 97 - Address family not supported by protocol).
+INFO (rank 20): trainset,valset,testset size: 13500 750 750
+INFO (rank 22): trainset,valset,testset size: 13500 750 750
+INFO (rank 16): trainset,valset,testset size: 13500 750 750
+INFO (rank 18): trainset,valset,testset size: 13500 750 750
+INFO (rank 19): trainset,valset,testset size: 13500 750 750
+INFO (rank 17): trainset,valset,testset size: 13500 750 750
+INFO (rank 21): trainset,valset,testset size: 13500 750 750
+INFO (rank 23): trainset,valset,testset size: 13500 750 750
+INFO (rank 0): HDF5 training mode: skipping OPF case discovery/download/split preparation.
+INFO (rank 27): trainset,valset,testset size: 13500 750 750
+INFO (rank 28): trainset,valset,testset size: 13500 750 750
+INFO (rank 29): trainset,valset,testset size: 13500 750 750
+INFO (rank 31): trainset,valset,testset size: 13500 750 750
+INFO (rank 25): trainset,valset,testset size: 13500 750 750
+INFO (rank 26): trainset,valset,testset size: 13500 750 750
+INFO (rank 30): trainset,valset,testset size: 13500 750 750
+INFO (rank 24): trainset,valset,testset size: 13500 750 750
+INFO (rank 0): trainset,valset,testset size: 13500 750 750
+INFO (rank 12): trainset,valset,testset size: 13500 750 750
+INFO (rank 10): trainset,valset,testset size: 13500 750 750
+INFO (rank 15): trainset,valset,testset size: 13500 750 750
+INFO (rank 11): trainset,valset,testset size: 13500 750 750
+INFO (rank 9): trainset,valset,testset size: 13500 750 750
+INFO (rank 14): trainset,valset,testset size: 13500 750 750
+INFO (rank 13): trainset,valset,testset size: 13500 750 750
+INFO (rank 8): trainset,valset,testset size: 13500 750 750
+0: Using GPU
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+0: CPUs, NVIDIA, and AMD GPUs do not need optimize wrapper
+0: Using GPU
+Using FSDP: False Version: 1 Sharding: ShardingStrategy.FULL_SHARD
+[diag][rank 0][4063657.214] Entering print_model
+0: module.graph_convs.0.convs.<bus___ac_line___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<bus___ac_line___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<bus___ac_line___bus>.att_edge	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<bus___ac_line___bus>.bias	               [256]	       256
+0: module.graph_convs.0.convs.<bus___ac_line___bus>.lin.weight	           [256, 64]	     16384
+0: module.graph_convs.0.convs.<bus___ac_line___bus>.lin_edge.weight	            [256, 9]	      2304
+0: module.graph_convs.0.convs.<bus___transformer___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<bus___transformer___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<bus___transformer___bus>.att_edge	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<bus___transformer___bus>.bias	               [256]	       256
+0: module.graph_convs.0.convs.<bus___transformer___bus>.lin.weight	           [256, 64]	     16384
+0: module.graph_convs.0.convs.<bus___transformer___bus>.lin_edge.weight	           [256, 11]	      2816
+0: module.graph_convs.0.convs.<generator___generator_link___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<generator___generator_link___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<generator___generator_link___bus>.bias	               [256]	       256
+0: module.graph_convs.0.convs.<generator___generator_link___bus>.lin.weight	           [256, 64]	     16384
+0: module.graph_convs.0.convs.<bus___generator_link___generator>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<bus___generator_link___generator>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<bus___generator_link___generator>.bias	               [256]	       256
+0: module.graph_convs.0.convs.<bus___generator_link___generator>.lin.weight	           [256, 64]	     16384
+0: module.graph_convs.0.convs.<load___load_link___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<load___load_link___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<load___load_link___bus>.bias	               [256]	       256
+0: module.graph_convs.0.convs.<load___load_link___bus>.lin.weight	           [256, 64]	     16384
+0: module.graph_convs.0.convs.<bus___load_link___load>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<bus___load_link___load>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<bus___load_link___load>.bias	               [256]	       256
+0: module.graph_convs.0.convs.<bus___load_link___load>.lin.weight	           [256, 64]	     16384
+0: module.graph_convs.0.convs.<shunt___shunt_link___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<shunt___shunt_link___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<shunt___shunt_link___bus>.bias	               [256]	       256
+0: module.graph_convs.0.convs.<shunt___shunt_link___bus>.lin.weight	           [256, 64]	     16384
+0: module.graph_convs.0.convs.<bus___shunt_link___shunt>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<bus___shunt_link___shunt>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.0.convs.<bus___shunt_link___shunt>.bias	               [256]	       256
+0: module.graph_convs.0.convs.<bus___shunt_link___shunt>.lin.weight	           [256, 64]	     16384
+0: module.graph_convs.1.convs.<bus___ac_line___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<bus___ac_line___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<bus___ac_line___bus>.att_edge	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<bus___ac_line___bus>.bias	               [256]	       256
+0: module.graph_convs.1.convs.<bus___ac_line___bus>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.1.convs.<bus___ac_line___bus>.lin_edge.weight	            [256, 9]	      2304
+0: module.graph_convs.1.convs.<bus___transformer___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<bus___transformer___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<bus___transformer___bus>.att_edge	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<bus___transformer___bus>.bias	               [256]	       256
+0: module.graph_convs.1.convs.<bus___transformer___bus>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.1.convs.<bus___transformer___bus>.lin_edge.weight	           [256, 11]	      2816
+0: module.graph_convs.1.convs.<generator___generator_link___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<generator___generator_link___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<generator___generator_link___bus>.bias	               [256]	       256
+0: module.graph_convs.1.convs.<generator___generator_link___bus>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.1.convs.<bus___generator_link___generator>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<bus___generator_link___generator>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<bus___generator_link___generator>.bias	               [256]	       256
+0: module.graph_convs.1.convs.<bus___generator_link___generator>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.1.convs.<load___load_link___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<load___load_link___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<load___load_link___bus>.bias	               [256]	       256
+0: module.graph_convs.1.convs.<load___load_link___bus>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.1.convs.<bus___load_link___load>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<bus___load_link___load>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<bus___load_link___load>.bias	               [256]	       256
+0: module.graph_convs.1.convs.<bus___load_link___load>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.1.convs.<shunt___shunt_link___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<shunt___shunt_link___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<shunt___shunt_link___bus>.bias	               [256]	       256
+0: module.graph_convs.1.convs.<shunt___shunt_link___bus>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.1.convs.<bus___shunt_link___shunt>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<bus___shunt_link___shunt>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.1.convs.<bus___shunt_link___shunt>.bias	               [256]	       256
+0: module.graph_convs.1.convs.<bus___shunt_link___shunt>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.2.convs.<bus___ac_line___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<bus___ac_line___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<bus___ac_line___bus>.att_edge	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<bus___ac_line___bus>.bias	               [256]	       256
+0: module.graph_convs.2.convs.<bus___ac_line___bus>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.2.convs.<bus___ac_line___bus>.lin_edge.weight	            [256, 9]	      2304
+0: module.graph_convs.2.convs.<bus___transformer___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<bus___transformer___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<bus___transformer___bus>.att_edge	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<bus___transformer___bus>.bias	               [256]	       256
+0: module.graph_convs.2.convs.<bus___transformer___bus>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.2.convs.<bus___transformer___bus>.lin_edge.weight	           [256, 11]	      2816
+0: module.graph_convs.2.convs.<generator___generator_link___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<generator___generator_link___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<generator___generator_link___bus>.bias	               [256]	       256
+0: module.graph_convs.2.convs.<generator___generator_link___bus>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.2.convs.<bus___generator_link___generator>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<bus___generator_link___generator>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<bus___generator_link___generator>.bias	               [256]	       256
+0: module.graph_convs.2.convs.<bus___generator_link___generator>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.2.convs.<load___load_link___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<load___load_link___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<load___load_link___bus>.bias	               [256]	       256
+0: module.graph_convs.2.convs.<load___load_link___bus>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.2.convs.<bus___load_link___load>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<bus___load_link___load>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<bus___load_link___load>.bias	               [256]	       256
+0: module.graph_convs.2.convs.<bus___load_link___load>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.2.convs.<shunt___shunt_link___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<shunt___shunt_link___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<shunt___shunt_link___bus>.bias	               [256]	       256
+0: module.graph_convs.2.convs.<shunt___shunt_link___bus>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.2.convs.<bus___shunt_link___shunt>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<bus___shunt_link___shunt>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.2.convs.<bus___shunt_link___shunt>.bias	               [256]	       256
+0: module.graph_convs.2.convs.<bus___shunt_link___shunt>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.3.convs.<bus___ac_line___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<bus___ac_line___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<bus___ac_line___bus>.att_edge	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<bus___ac_line___bus>.bias	                [64]	        64
+0: module.graph_convs.3.convs.<bus___ac_line___bus>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.3.convs.<bus___ac_line___bus>.lin_edge.weight	            [256, 9]	      2304
+0: module.graph_convs.3.convs.<bus___transformer___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<bus___transformer___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<bus___transformer___bus>.att_edge	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<bus___transformer___bus>.bias	                [64]	        64
+0: module.graph_convs.3.convs.<bus___transformer___bus>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.3.convs.<bus___transformer___bus>.lin_edge.weight	           [256, 11]	      2816
+0: module.graph_convs.3.convs.<generator___generator_link___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<generator___generator_link___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<generator___generator_link___bus>.bias	                [64]	        64
+0: module.graph_convs.3.convs.<generator___generator_link___bus>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.3.convs.<bus___generator_link___generator>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<bus___generator_link___generator>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<bus___generator_link___generator>.bias	                [64]	        64
+0: module.graph_convs.3.convs.<bus___generator_link___generator>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.3.convs.<load___load_link___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<load___load_link___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<load___load_link___bus>.bias	                [64]	        64
+0: module.graph_convs.3.convs.<load___load_link___bus>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.3.convs.<bus___load_link___load>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<bus___load_link___load>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<bus___load_link___load>.bias	                [64]	        64
+0: module.graph_convs.3.convs.<bus___load_link___load>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.3.convs.<shunt___shunt_link___bus>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<shunt___shunt_link___bus>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<shunt___shunt_link___bus>.bias	                [64]	        64
+0: module.graph_convs.3.convs.<shunt___shunt_link___bus>.lin.weight	          [256, 256]	     65536
+0: module.graph_convs.3.convs.<bus___shunt_link___shunt>.att_src	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<bus___shunt_link___shunt>.att_dst	          [1, 4, 64]	       256
+0: module.graph_convs.3.convs.<bus___shunt_link___shunt>.bias	                [64]	        64
+0: module.graph_convs.3.convs.<bus___shunt_link___shunt>.lin.weight	          [256, 256]	     65536
+0:          module.feature_layers.0.bus.module.weight	               [256]	       256
+0:            module.feature_layers.0.bus.module.bias	               [256]	       256
+0:    module.feature_layers.0.bus.module.running_mean	               [256]	       256
+0:     module.feature_layers.0.bus.module.running_var	               [256]	       256
+0: module.feature_layers.0.bus.module.num_batches_tracked	                  []	         1
+0:    module.feature_layers.0.generator.module.weight	               [256]	       256
+0:      module.feature_layers.0.generator.module.bias	               [256]	       256
+0: module.feature_layers.0.generator.module.running_mean	               [256]	       256
+0: module.feature_layers.0.generator.module.running_var	               [256]	       256
+0: module.feature_layers.0.generator.module.num_batches_tracked	                  []	         1
+0:         module.feature_layers.0.load.module.weight	               [256]	       256
+0:           module.feature_layers.0.load.module.bias	               [256]	       256
+0:   module.feature_layers.0.load.module.running_mean	               [256]	       256
+0:    module.feature_layers.0.load.module.running_var	               [256]	       256
+0: module.feature_layers.0.load.module.num_batches_tracked	                  []	         1
+0:        module.feature_layers.0.shunt.module.weight	               [256]	       256
+0:          module.feature_layers.0.shunt.module.bias	               [256]	       256
+0:  module.feature_layers.0.shunt.module.running_mean	               [256]	       256
+0:   module.feature_layers.0.shunt.module.running_var	               [256]	       256
+0: module.feature_layers.0.shunt.module.num_batches_tracked	                  []	         1
+0:          module.feature_layers.1.bus.module.weight	               [256]	       256
+0:            module.feature_layers.1.bus.module.bias	               [256]	       256
+0:    module.feature_layers.1.bus.module.running_mean	               [256]	       256
+0:     module.feature_layers.1.bus.module.running_var	               [256]	       256
+0: module.feature_layers.1.bus.module.num_batches_tracked	                  []	         1
+0:    module.feature_layers.1.generator.module.weight	               [256]	       256
+0:      module.feature_layers.1.generator.module.bias	               [256]	       256
+0: module.feature_layers.1.generator.module.running_mean	               [256]	       256
+0: module.feature_layers.1.generator.module.running_var	               [256]	       256
+0: module.feature_layers.1.generator.module.num_batches_tracked	                  []	         1
+0:         module.feature_layers.1.load.module.weight	               [256]	       256
+0:           module.feature_layers.1.load.module.bias	               [256]	       256
+0:   module.feature_layers.1.load.module.running_mean	               [256]	       256
+0:    module.feature_layers.1.load.module.running_var	               [256]	       256
+0: module.feature_layers.1.load.module.num_batches_tracked	                  []	         1
+0:        module.feature_layers.1.shunt.module.weight	               [256]	       256
+0:          module.feature_layers.1.shunt.module.bias	               [256]	       256
+0:  module.feature_layers.1.shunt.module.running_mean	               [256]	       256
+0:   module.feature_layers.1.shunt.module.running_var	               [256]	       256
+0: module.feature_layers.1.shunt.module.num_batches_tracked	                  []	         1
+0:          module.feature_layers.2.bus.module.weight	               [256]	       256
+0:            module.feature_layers.2.bus.module.bias	               [256]	       256
+0:    module.feature_layers.2.bus.module.running_mean	               [256]	       256
+0:     module.feature_layers.2.bus.module.running_var	               [256]	       256
+0: module.feature_layers.2.bus.module.num_batches_tracked	                  []	         1
+0:    module.feature_layers.2.generator.module.weight	               [256]	       256
+0:      module.feature_layers.2.generator.module.bias	               [256]	       256
+0: module.feature_layers.2.generator.module.running_mean	               [256]	       256
+0: module.feature_layers.2.generator.module.running_var	               [256]	       256
+0: module.feature_layers.2.generator.module.num_batches_tracked	                  []	         1
+0:         module.feature_layers.2.load.module.weight	               [256]	       256
+0:           module.feature_layers.2.load.module.bias	               [256]	       256
+0:   module.feature_layers.2.load.module.running_mean	               [256]	       256
+0:    module.feature_layers.2.load.module.running_var	               [256]	       256
+0: module.feature_layers.2.load.module.num_batches_tracked	                  []	         1
+0:        module.feature_layers.2.shunt.module.weight	               [256]	       256
+0:          module.feature_layers.2.shunt.module.bias	               [256]	       256
+0:  module.feature_layers.2.shunt.module.running_mean	               [256]	       256
+0:   module.feature_layers.2.shunt.module.running_var	               [256]	       256
+0: module.feature_layers.2.shunt.module.num_batches_tracked	                  []	         1
+0:          module.feature_layers.3.bus.module.weight	                [64]	        64
+0:            module.feature_layers.3.bus.module.bias	                [64]	        64
+0:    module.feature_layers.3.bus.module.running_mean	                [64]	        64
+0:     module.feature_layers.3.bus.module.running_var	                [64]	        64
+0: module.feature_layers.3.bus.module.num_batches_tracked	                  []	         1
+0:    module.feature_layers.3.generator.module.weight	                [64]	        64
+0:      module.feature_layers.3.generator.module.bias	                [64]	        64
+0: module.feature_layers.3.generator.module.running_mean	                [64]	        64
+0: module.feature_layers.3.generator.module.running_var	                [64]	        64
+0: module.feature_layers.3.generator.module.num_batches_tracked	                  []	         1
+0:         module.feature_layers.3.load.module.weight	                [64]	        64
+0:           module.feature_layers.3.load.module.bias	                [64]	        64
+0:   module.feature_layers.3.load.module.running_mean	                [64]	        64
+0:    module.feature_layers.3.load.module.running_var	                [64]	        64
+0: module.feature_layers.3.load.module.num_batches_tracked	                  []	         1
+0:        module.feature_layers.3.shunt.module.weight	                [64]	        64
+0:          module.feature_layers.3.shunt.module.bias	                [64]	        64
+0:  module.feature_layers.3.shunt.module.running_mean	                [64]	        64
+0:   module.feature_layers.3.shunt.module.running_var	                [64]	        64
+0: module.feature_layers.3.shunt.module.num_batches_tracked	                  []	         1
+0:                   module.node_embedders.bus.weight	             [64, 4]	       256
+0:                     module.node_embedders.bus.bias	                [64]	        64
+0:             module.node_embedders.generator.weight	            [64, 11]	       704
+0:               module.node_embedders.generator.bias	                [64]	        64
+0:                  module.node_embedders.load.weight	             [64, 2]	       128
+0:                    module.node_embedders.load.bias	                [64]	        64
+0:                 module.node_embedders.shunt.weight	             [64, 2]	       128
+0:                   module.node_embedders.shunt.bias	                [64]	        64
+0:          module.heads_NN.0.branch-0.mlp.0.0.weight	            [32, 64]	      2048
+0:            module.heads_NN.0.branch-0.mlp.0.0.bias	                [32]	        32
+0:          module.heads_NN.0.branch-0.mlp.0.2.weight	            [16, 32]	       512
+0:            module.heads_NN.0.branch-0.mlp.0.2.bias	                [16]	        16
+0:          module.heads_NN.0.branch-0.mlp.0.4.weight	             [2, 16]	        32
+0:            module.heads_NN.0.branch-0.mlp.0.4.bias	                 [2]	         2
+0: --------------------------------------------------
+0:                                              Total	                    	   1766946
+0: All (total, MB): 1766946 6.74043
+[diag][rank 0][4063657.225] Exited print_model
+[diag][rank 0][4063657.225] Entering load_existing_model_config
+[diag][rank 0][4063657.225] Exited load_existing_model_config
+[diag][rank 0][4063657.225] Entering train_validate_test
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.830936576 GB 5.188354048 GB
+0: Max memory allocated after optimizer step: 4.924914176 GB 5.20093696 GB
+0: Max memory allocated after optimizer step: 4.924914176 GB 5.20093696 GB
+0: Max memory allocated after optimizer step: 4.924914176 GB 5.20093696 GB
+0: Max memory allocated after optimizer step: 4.924914176 GB 5.20093696 GB
+0: Max memory allocated after optimizer step: 4.924914176 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924914176 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924914176 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924914176 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924914176 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924914176 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924914176 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924914176 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924914176 GB 5.203034112 GB
+0: Epoch: 00, Train Loss: 0.60376418, Val Loss: 0.53372389, Test Loss: 0.53393328
+0: Tasks Train Loss: [0.6037641763687134]
+0: Tasks Val Loss: [0.5337238907814026]
+0: Tasks Test Loss: [0.5339332818984985]
+/lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/installation_DOE_supercomputers/HydraGNN-Installation-Frontier/hydragnn_venv/lib/python3.11/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+0: Creating Checkpoint: 0.533724
+0: Best Performance Metric: 0.533724
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924914176 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 01, Train Loss: 0.29968202, Val Loss: 0.17247900, Test Loss: 0.17254409
+0: Tasks Train Loss: [0.29968202114105225]
+0: Tasks Val Loss: [0.17247900366783142]
+0: Tasks Test Loss: [0.17254409193992615]
+0: Creating Checkpoint: 0.172479
+0: Best Performance Metric: 0.172479
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 02, Train Loss: 0.07156456, Val Loss: 0.03810483, Test Loss: 0.03818376
+0: Tasks Train Loss: [0.07156456261873245]
+0: Tasks Val Loss: [0.0381048321723938]
+0: Tasks Test Loss: [0.03818375617265701]
+0: Creating Checkpoint: 0.038105
+0: Best Performance Metric: 0.038105
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 03, Train Loss: 0.03260095, Val Loss: 0.03077187, Test Loss: 0.03086679
+0: Tasks Train Loss: [0.032600946724414825]
+0: Tasks Val Loss: [0.03077186644077301]
+0: Tasks Test Loss: [0.03086678683757782]
+0: Creating Checkpoint: 0.030772
+0: Best Performance Metric: 0.030772
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 04, Train Loss: 0.02278946, Val Loss: 0.03043283, Test Loss: 0.03051815
+0: Tasks Train Loss: [0.02278945967555046]
+0: Tasks Val Loss: [0.03043283149600029]
+0: Tasks Test Loss: [0.030518146231770515]
+0: Creating Checkpoint: 0.030433
+0: Best Performance Metric: 0.030433
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 05, Train Loss: 0.02005808, Val Loss: 0.02341904, Test Loss: 0.02350638
+0: Tasks Train Loss: [0.020058084279298782]
+0: Tasks Val Loss: [0.02341904304921627]
+0: Tasks Test Loss: [0.02350637875497341]
+0: Creating Checkpoint: 0.023419
+0: Best Performance Metric: 0.023419
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 06, Train Loss: 0.01846080, Val Loss: 0.02169336, Test Loss: 0.02174900
+0: Tasks Train Loss: [0.018460802733898163]
+0: Tasks Val Loss: [0.021693358197808266]
+0: Tasks Test Loss: [0.021748997271060944]
+0: Creating Checkpoint: 0.021693
+0: Best Performance Metric: 0.021693
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 07, Train Loss: 0.01725457, Val Loss: 0.02052657, Test Loss: 0.02059019
+0: Tasks Train Loss: [0.017254570499062538]
+0: Tasks Val Loss: [0.020526565611362457]
+0: Tasks Test Loss: [0.02059018798172474]
+0: Creating Checkpoint: 0.020527
+0: Best Performance Metric: 0.020527
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 08, Train Loss: 0.01613050, Val Loss: 0.02124860, Test Loss: 0.02132760
+0: Tasks Train Loss: [0.016130497679114342]
+0: Tasks Val Loss: [0.021248599514365196]
+0: Tasks Test Loss: [0.02132759988307953]
+0: Best Performance Metric: 0.020527
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 09, Train Loss: 0.01493900, Val Loss: 0.01770371, Test Loss: 0.01774007
+0: Tasks Train Loss: [0.014939001761376858]
+0: Tasks Val Loss: [0.01770370826125145]
+0: Tasks Test Loss: [0.017740067094564438]
+0: Creating Checkpoint: 0.017704
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 10, Train Loss: 0.01370697, Val Loss: 0.01894183, Test Loss: 0.01899542
+0: Tasks Train Loss: [0.01370697095990181]
+0: Tasks Val Loss: [0.018941830843687057]
+0: Tasks Test Loss: [0.01899542473256588]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 11, Train Loss: 0.01263660, Val Loss: 0.02249203, Test Loss: 0.02256314
+0: Tasks Train Loss: [0.012636598199605942]
+0: Tasks Val Loss: [0.022492030635476112]
+0: Tasks Test Loss: [0.022563138976693153]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 12, Train Loss: 0.01183267, Val Loss: 0.01917720, Test Loss: 0.01920691
+0: Tasks Train Loss: [0.01183266844600439]
+0: Tasks Val Loss: [0.01917720027267933]
+0: Tasks Test Loss: [0.019206911325454712]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 13, Train Loss: 0.01123823, Val Loss: 0.02098682, Test Loss: 0.02103934
+0: Tasks Train Loss: [0.011238225735723972]
+0: Tasks Val Loss: [0.020986823365092278]
+0: Tasks Test Loss: [0.021039336919784546]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 14, Train Loss: 0.01082508, Val Loss: 0.01928451, Test Loss: 0.01931954
+0: Tasks Train Loss: [0.010825084522366524]
+0: Tasks Val Loss: [0.01928451471030712]
+0: Tasks Test Loss: [0.01931954175233841]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 15, Train Loss: 0.01037856, Val Loss: 0.01950750, Test Loss: 0.01953456
+0: Tasks Train Loss: [0.010378558188676834]
+0: Tasks Val Loss: [0.019507503136992455]
+0: Tasks Test Loss: [0.019534556195139885]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 16, Train Loss: 0.01008357, Val Loss: 0.01866979, Test Loss: 0.01869585
+0: Tasks Train Loss: [0.010083568282425404]
+0: Tasks Val Loss: [0.018669793382287025]
+0: Tasks Test Loss: [0.018695853650569916]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 17, Train Loss: 0.00987487, Val Loss: 0.01944846, Test Loss: 0.01948833
+0: Tasks Train Loss: [0.009874865412712097]
+0: Tasks Val Loss: [0.019448459148406982]
+0: Tasks Test Loss: [0.01948833093047142]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 18, Train Loss: 0.00971317, Val Loss: 0.02151802, Test Loss: 0.02156862
+0: Tasks Train Loss: [0.00971316546201706]
+0: Tasks Val Loss: [0.02151801809668541]
+0: Tasks Test Loss: [0.021568624302744865]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 19, Train Loss: 0.00958708, Val Loss: 0.02177121, Test Loss: 0.02181268
+0: Tasks Train Loss: [0.00958708394318819]
+0: Tasks Val Loss: [0.02177121490240097]
+0: Tasks Test Loss: [0.02181267738342285]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 20, Train Loss: 0.00944982, Val Loss: 0.02035203, Test Loss: 0.02039688
+0: Tasks Train Loss: [0.009449816308915615]
+0: Tasks Val Loss: [0.02035203017294407]
+0: Tasks Test Loss: [0.0203968808054924]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 21, Train Loss: 0.00935131, Val Loss: 0.02019306, Test Loss: 0.02023391
+0: Tasks Train Loss: [0.00935131311416626]
+0: Tasks Val Loss: [0.020193060860037804]
+0: Tasks Test Loss: [0.02023390866816044]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 22, Train Loss: 0.00924024, Val Loss: 0.02118507, Test Loss: 0.02123354
+0: Tasks Train Loss: [0.009240240789949894]
+0: Tasks Val Loss: [0.021185066550970078]
+0: Tasks Test Loss: [0.021233538165688515]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 23, Train Loss: 0.00917693, Val Loss: 0.01987341, Test Loss: 0.01991635
+0: Tasks Train Loss: [0.00917692668735981]
+0: Tasks Val Loss: [0.01987341418862343]
+0: Tasks Test Loss: [0.0199163518846035]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 24, Train Loss: 0.00911203, Val Loss: 0.02018392, Test Loss: 0.02022557
+0: Tasks Train Loss: [0.009112025611102581]
+0: Tasks Val Loss: [0.020183918997645378]
+0: Tasks Test Loss: [0.02022556960582733]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 25, Train Loss: 0.00906377, Val Loss: 0.02001817, Test Loss: 0.02005055
+0: Tasks Train Loss: [0.00906376726925373]
+0: Tasks Val Loss: [0.020018169656395912]
+0: Tasks Test Loss: [0.02005055360496044]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 26, Train Loss: 0.00901220, Val Loss: 0.02025441, Test Loss: 0.02029544
+0: Tasks Train Loss: [0.009012197144329548]
+0: Tasks Val Loss: [0.020254408940672874]
+0: Tasks Test Loss: [0.02029544487595558]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 27, Train Loss: 0.00895787, Val Loss: 0.01935511, Test Loss: 0.01939838
+0: Tasks Train Loss: [0.008957869373261929]
+0: Tasks Val Loss: [0.019355105236172676]
+0: Tasks Test Loss: [0.01939838007092476]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 28, Train Loss: 0.00890901, Val Loss: 0.01988140, Test Loss: 0.01991056
+0: Tasks Train Loss: [0.008909005671739578]
+0: Tasks Val Loss: [0.019881397485733032]
+0: Tasks Test Loss: [0.01991056092083454]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 29, Train Loss: 0.00887157, Val Loss: 0.02009587, Test Loss: 0.02013678
+0: Tasks Train Loss: [0.008871565572917461]
+0: Tasks Val Loss: [0.02009587176144123]
+0: Tasks Test Loss: [0.02013678289949894]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 30, Train Loss: 0.00884023, Val Loss: 0.01972114, Test Loss: 0.01975797
+0: Tasks Train Loss: [0.008840229362249374]
+0: Tasks Val Loss: [0.019721142947673798]
+0: Tasks Test Loss: [0.019757969304919243]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 31, Train Loss: 0.00882166, Val Loss: 0.02016555, Test Loss: 0.02020416
+0: Tasks Train Loss: [0.008821663446724415]
+0: Tasks Val Loss: [0.020165549591183662]
+0: Tasks Test Loss: [0.02020415849983692]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 32, Train Loss: 0.00877543, Val Loss: 0.01985397, Test Loss: 0.01988835
+0: Tasks Train Loss: [0.008775433525443077]
+0: Tasks Val Loss: [0.019853971898555756]
+0: Tasks Test Loss: [0.019888345152139664]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 33, Train Loss: 0.00878023, Val Loss: 0.02033903, Test Loss: 0.02037298
+0: Tasks Train Loss: [0.008780226111412048]
+0: Tasks Val Loss: [0.02033902518451214]
+0: Tasks Test Loss: [0.02037297561764717]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 34, Train Loss: 0.00875512, Val Loss: 0.01968737, Test Loss: 0.01972653
+0: Tasks Train Loss: [0.00875511672347784]
+0: Tasks Val Loss: [0.019687369465827942]
+0: Tasks Test Loss: [0.019726533442735672]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 35, Train Loss: 0.00875695, Val Loss: 0.01988355, Test Loss: 0.01992091
+0: Tasks Train Loss: [0.008756954222917557]
+0: Tasks Val Loss: [0.019883552566170692]
+0: Tasks Test Loss: [0.019920913502573967]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 36, Train Loss: 0.00872291, Val Loss: 0.01961276, Test Loss: 0.01964979
+0: Tasks Train Loss: [0.008722906932234764]
+0: Tasks Val Loss: [0.019612755626440048]
+0: Tasks Test Loss: [0.019649792462587357]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 37, Train Loss: 0.00872059, Val Loss: 0.01963482, Test Loss: 0.01967095
+0: Tasks Train Loss: [0.008720586076378822]
+0: Tasks Val Loss: [0.01963481865823269]
+0: Tasks Test Loss: [0.019670948386192322]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 38, Train Loss: 0.00870383, Val Loss: 0.01970186, Test Loss: 0.01973755
+0: Tasks Train Loss: [0.008703826926648617]
+0: Tasks Val Loss: [0.01970185711979866]
+0: Tasks Test Loss: [0.019737550988793373]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 39, Train Loss: 0.00868361, Val Loss: 0.01992364, Test Loss: 0.01995895
+0: Tasks Train Loss: [0.008683606050908566]
+0: Tasks Val Loss: [0.019923636689782143]
+0: Tasks Test Loss: [0.01995895244181156]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 40, Train Loss: 0.00867736, Val Loss: 0.01996763, Test Loss: 0.02000578
+0: Tasks Train Loss: [0.008677355013787746]
+0: Tasks Val Loss: [0.01996762678027153]
+0: Tasks Test Loss: [0.02000577747821808]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 41, Train Loss: 0.00865599, Val Loss: 0.02009314, Test Loss: 0.02013223
+0: Tasks Train Loss: [0.008655986748635769]
+0: Tasks Val Loss: [0.02009313926100731]
+0: Tasks Test Loss: [0.02013223059475422]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 42, Train Loss: 0.00866540, Val Loss: 0.01971669, Test Loss: 0.01975130
+0: Tasks Train Loss: [0.008665403351187706]
+0: Tasks Val Loss: [0.019716689363121986]
+0: Tasks Test Loss: [0.019751297309994698]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 43, Train Loss: 0.00865739, Val Loss: 0.02009522, Test Loss: 0.02013155
+0: Tasks Train Loss: [0.00865738932043314]
+0: Tasks Val Loss: [0.02009522169828415]
+0: Tasks Test Loss: [0.0201315525919199]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 44, Train Loss: 0.00863137, Val Loss: 0.01969771, Test Loss: 0.01973450
+0: Tasks Train Loss: [0.008631373755633831]
+0: Tasks Val Loss: [0.019697709009051323]
+0: Tasks Test Loss: [0.019734499976038933]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 45, Train Loss: 0.00862554, Val Loss: 0.01964523, Test Loss: 0.01967848
+0: Tasks Train Loss: [0.008625536225736141]
+0: Tasks Val Loss: [0.01964522898197174]
+0: Tasks Test Loss: [0.019678479060530663]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 46, Train Loss: 0.00864408, Val Loss: 0.01992914, Test Loss: 0.01996429
+0: Tasks Train Loss: [0.008644075132906437]
+0: Tasks Val Loss: [0.01992914080619812]
+0: Tasks Test Loss: [0.019964292645454407]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 47, Train Loss: 0.00860731, Val Loss: 0.01980061, Test Loss: 0.01983841
+0: Tasks Train Loss: [0.00860731489956379]
+0: Tasks Val Loss: [0.019800608977675438]
+0: Tasks Test Loss: [0.019838407635688782]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 48, Train Loss: 0.00861017, Val Loss: 0.01989491, Test Loss: 0.01992679
+0: Tasks Train Loss: [0.008610168471932411]
+0: Tasks Val Loss: [0.019894914701581]
+0: Tasks Test Loss: [0.01992679387331009]
+0: Best Performance Metric: 0.017704
+[precision-diagnostic] requested=fp32 model_param_dtype=torch.float32
+[precision-diagnostic] first_batch_float_dtype=torch.float32
+[precision-diagnostic] first_optimizer_state_float_dtype=torch.float32
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Max memory allocated after optimizer step: 4.924917248 GB 5.203034112 GB
+0: Epoch: 49, Train Loss: 0.00860995, Val Loss: 0.01989380, Test Loss: 0.01992665
+0: Tasks Train Loss: [0.008609950542449951]
+0: Tasks Val Loss: [0.019893798977136612]
+0: Tasks Test Loss: [0.0199266504496336]
+0: Best Performance Metric: 0.017704
+[diag][rank 0][4063845.910] Exited train_validate_test
+0: Process 0 - Local timer:  train_validate_test  :  188.67
+0: Process 0 - Local timer:  create_model  :  0.1
+0: Minimum timers: 
+0: train_validate_test  :  188.51
+0: create_model  :  0.1
+0: Maximum timers: 
+0: train_validate_test  :  188.69
+0: create_model  :  0.11
+0: Average timers: 
+0: train_validate_test  :  188.64
+0: create_model  :  0.11
+0: Number of calls to timers: 
+0: {'create_model': 1, 'train_validate_test': 1}

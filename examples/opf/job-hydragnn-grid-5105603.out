@@ -1,0 +1,252 @@
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+DefApps:
+   ROCm/5.x modules and HPE/Cray Programming Environment (CPE) versions <=
+   23.12 were removed on July 1, 2026. For more information regarding the
+   removal, please see https://docs.olcf.ornl.gov/software/software-news.html#frontier-software-changes-july-1-2026
+
+-------------------------------------------------------------------------------
+
+
+The following have been reloaded with a version change:
+  1) PrgEnv-cray/8.6.0 => PrgEnv-cray/8.5.0
+  2) cce/18.0.1 => cce/18.0.0
+  3) cray-libsci/24.11.0 => cray-libsci/24.07.0
+  4) cray-mpich/8.1.31 => cray-mpich/8.1.30
+  5) cray-pmi/6.1.15 => cray-pmi/6.1.15.21
+  6) craype/2.7.33 => craype/2.7.32
+  7) darshan-runtime/3.4.6-mpi => darshan-runtime/3.4.4-mpi
+  8) perftools-base/24.11.0 => perftools-base/24.07.0
+
+Lmod Warning:
+================================================================================
+
+    Mixed compiler modules are being deprecated in a future release.
+    For more information run: module help amd-mixed
+
+================================================================================
+
+
+While processing the following module(s):
+    Module fullname  Module Filename
+    ---------------  ---------------
+    amd-mixed/7.1.1  /opt/cray/pe/lmod/modulefiles/mix_compilers/amd-mixed/7.1.1.lua
+
+
+Lmod is automatically replacing "cce/18.0.0" with "gcc-native/13.2".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.5.0" with "PrgEnv-gnu/8.5.0".
+
+Lmod Warning:
+================================================================================
+
+    Mixed compiler modules are being deprecated in a future release.
+    For more information run: module help amd-mixed
+
+================================================================================
+
+
+While processing the following module(s):
+    Module fullname  Module Filename
+    ---------------  ---------------
+    amd-mixed/7.1.1  /opt/cray/pe/lmod/modulefiles/mix_compilers/amd-mixed/7.1.1.lua
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.07.0     2) cray-mpich/8.1.30     3) darshan-runtime/3.4.4-mpi
+
+Lmod Warning:
+================================================================================
+
+    Mixed compiler modules are being deprecated in a future release.
+    For more information run: module help amd-mixed
+
+================================================================================
+
+
+While processing the following module(s):
+    Module fullname  Module Filename
+    ---------------  ---------------
+    amd-mixed/7.1.1  /opt/cray/pe/lmod/modulefiles/mix_compilers/amd-mixed/7.1.1.lua
+
+/lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/installation_DOE_supercomputers/HydraGNN-Installation-Frontier/hydragnn_venv/bin/python
+2.10.2 /lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/installation_DOE_supercomputers/HydraGNN-Installation-Frontier/hydragnn_venv/lib/python3.11/site-packages/adios2/__init__.py
+2.12.1+rocm7.1 /lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/installation_DOE_supercomputers/HydraGNN-Installation-Frontier/hydragnn_venv/lib/python3.11/site-packages/torch/__init__.py
+
+Note: the module "darshan-runtime" cannot be unloaded because it was not
+loaded.
+
+Lmod Warning:
+================================================================================
+
+    Mixed compiler modules are being deprecated in a future release.
+    For more information run: module help amd-mixed
+
+================================================================================
+
+
+While processing the following module(s):
+    Module fullname  Module Filename
+    ---------------  ---------------
+    amd-mixed/7.1.1  /opt/cray/pe/lmod/modulefiles/mix_compilers/amd-mixed/7.1.1.lua
+
+
+Currently Loaded Modules:
+  1) craype-x86-trento                13) rocm/7.1.1
+  2) libfabric/2.3.1                  14) amd-mixed/7.1.1
+  3) craype-network-ofi               15) craype-accel-amd-gfx90a
+  4) xpmem/1.0.1-1.5_1_gfb6998056825  16) gcc-native/13.2
+  5) Core/25.03                       17) craype/2.7.32
+  6) tmux/3.4                         18) cray-dsmml/0.3.0
+  7) hsi/default                      19) cray-mpich/8.1.30
+  8) lfs-wrapper/0.0.1                20) cray-libsci/24.07.0
+  9) DefApps                          21) PrgEnv-gnu/8.5.0
+ 10) cray-pmi/6.1.15.21               22) miniforge3/23.11.0-0
+ 11) perftools-base/24.07.0           23) git-lfs/3.5.1
+ 12) cpe/24.07
+
+ 
+
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582425 1646534 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582492  609522 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582406 1646536 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582511  609517 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582470 1646537 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582530  609518 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582467 1646539 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582549  609516 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582476 1646532 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582564  609519 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582487 1646533 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582567  609520 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582445 1646535 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582566  609521 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582478 1646538 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245117.582581  609523 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+I0000 00:00:1785245119.687444 1646532 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785245119.687470 1646534 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785245119.687476 1646536 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785245119.687388 1646539 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785245119.687480 1646533 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785245119.687495 1646535 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785245119.687497 1646537 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785245119.687507 1646538 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785245119.691242  609518 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785245119.691228  609520 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785245119.691247  609523 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785245119.691261  609516 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785245119.691311  609517 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785245119.691327  609519 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785245119.691289  609522 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1785245119.691330  609521 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.422881 1646532 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.422896 1646533 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.422886 1646534 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.422889 1646538 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.422966 1646535 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.422955 1646536 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.422913 1646537 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.422903 1646539 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.423301  609517 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.423345  609518 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.423355  609523 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.423394  609516 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.423388  609520 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.423374  609521 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.423410  609519 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785245124.423375  609522 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Distributed data parallel: nccl master at 10.128.120.40:15603
+[W728 09:25:27.367440311 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+[W728 09:25:27.371215931 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+[W728 09:25:27.375884923 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+[W728 09:25:28.381778470 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+[W728 09:25:28.383072719 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+[W728 09:25:28.383423890 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+[W728 09:25:28.384783025 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+[W728 09:25:28.393048460 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+[W728 09:25:28.343798080 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+[W728 09:25:28.343790596 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+[W728 09:25:28.347768269 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+[W728 09:25:28.353878712 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+[W728 09:25:28.356831895 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+[W728 09:25:28.356940280 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+[W728 09:25:28.357220701 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+[W728 09:25:28.357256038 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [frontier07685.frontier.olcf.ornl.gov]:15603 (errno: 97 - Address family not supported by protocol).
+INFO (rank 0): OPF parallel fetch/extract: rank=0 assigned_groups=1
+INFO (rank 0): OPF parallel fetch/extract summary: rank=0 case=pglib_opf_case2000_goc groups=1 downloaded=0 extracted=0 skip_download=1 skip_extract=1
+INFO (rank 0): OPF extract check: skip case=pglib_opf_case2000_goc reason=tmp_dir_healthy path=/lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/examples/opf/dataset/dataset_release_1/pglib_opf_case2000_goc/raw/gridopt-dataset-tmp
+INFO (rank 0): OPF dataset ready: case=pglib_opf_case2000_goc groups=1 topological_perturbations=False
+INFO (rank 0): Timing case=pglib_opf_case2000_goc phase=download_extract groups=1: max=189.47s avg=189.47s
+INFO (rank 0): Timing case=pglib_opf_case2000_goc phase=prepare_total groups=1: max=189.48s avg=189.48s
+Preprocess train pglib_opf_case2000_goc: 0it [00:00, ?it/s]Preprocess train pglib_opf_case2000_goc: 2it [00:00, 18.08it/s]Preprocess train pglib_opf_case2000_goc: 6it [00:00, 27.11it/s]Preprocess train pglib_opf_case2000_goc: 10it [00:00, 29.70it/s]Preprocess train pglib_opf_case2000_goc: 13it [00:00, 16.05it/s]Preprocess train pglib_opf_case2000_goc: 17it [00:00, 20.23it/s]Preprocess train pglib_opf_case2000_goc: 21it [00:00, 23.46it/s]Preprocess train pglib_opf_case2000_goc: 25it [00:01, 25.87it/s]Preprocess train pglib_opf_case2000_goc: 28it [00:01, 26.48it/s]Preprocess train pglib_opf_case2000_goc: 31it [00:01, 18.78it/s]Preprocess train pglib_opf_case2000_goc: 35it [00:01, 21.93it/s]Preprocess train pglib_opf_case2000_goc: 39it [00:01, 24.58it/s]Preprocess train pglib_opf_case2000_goc: 43it [00:01, 26.47it/s]Preprocess train pglib_opf_case2000_goc: 47it [00:01, 27.84it/s]Preprocess train pglib_opf_case2000_goc: 50it [00:02, 19.74it/s]Preprocess train pglib_opf_case2000_goc: 54it [00:02, 22.49it/s]Preprocess train pglib_opf_case2000_goc: 58it [00:02, 24.83it/s]Preprocess train pglib_opf_case2000_goc: 62it [00:02, 26.69it/s]Preprocess train pglib_opf_case2000_goc: 65it [00:02, 18.00it/s]Preprocess train pglib_opf_case2000_goc: 68it [00:03, 15.24it/s]Preprocess train pglib_opf_case2000_goc: 71it [00:03, 17.46it/s]Preprocess train pglib_opf_case2000_goc: 75it [00:03, 20.75it/s]Preprocess train pglib_opf_case2000_goc: 79it [00:03, 23.51it/s]Preprocess train pglib_opf_case2000_goc: 83it [00:03, 25.68it/s]Preprocess train pglib_opf_case2000_goc: 87it [00:04, 19.33it/s]Preprocess train pglib_opf_case2000_goc: 91it [00:04, 22.07it/s]Preprocess train pglib_opf_case2000_goc: 95it [00:04, 24.43it/s]Preprocess train pglib_opf_case2000_goc: 99it [00:04, 26.41it/s]Preprocess train pglib_opf_case2000_goc: 103it [00:04, 27.84it/s]Preprocess train pglib_opf_case2000_goc: 107it [00:04, 20.37it/s]Preprocess train pglib_opf_case2000_goc: 111it [00:04, 22.87it/s]Preprocess train pglib_opf_case2000_goc: 115it [00:05, 25.05it/s]Preprocess train pglib_opf_case2000_goc: 119it [00:05, 26.88it/s]Preprocess train pglib_opf_case2000_goc: 123it [00:05, 28.24it/s]Preprocess train pglib_opf_case2000_goc: 127it [00:05, 20.59it/s]Preprocess train pglib_opf_case2000_goc: 130it [00:05, 18.71it/s]Preprocess train pglib_opf_case2000_goc: 134it [00:05, 21.51it/s]Preprocess train pglib_opf_case2000_goc: 138it [00:06, 23.92it/s]Preprocess train pglib_opf_case2000_goc: 141it [00:06, 24.86it/s]Preprocess train pglib_opf_case2000_goc: 145it [00:06, 18.87it/s]Preprocess train pglib_opf_case2000_goc: 149it [00:06, 21.74it/s]Preprocess train pglib_opf_case2000_goc: 153it [00:06, 24.32it/s]Preprocess train pglib_opf_case2000_goc: 157it [00:06, 26.47it/s]Preprocess train pglib_opf_case2000_goc: 161it [00:07, 28.04it/s]Preprocess train pglib_opf_case2000_goc: 165it [00:07, 29.25it/s]Preprocess train pglib_opf_case2000_goc: 169it [00:07, 20.96it/s]Preprocess train pglib_opf_case2000_goc: 173it [00:07, 23.43it/s]Preprocess train pglib_opf_case2000_goc: 177it [00:07, 25.44it/s]Preprocess train pglib_opf_case2000_goc: 181it [00:07, 27.04it/s]Preprocess train pglib_opf_case2000_goc: 184it [00:08, 19.44it/s]Preprocess train pglib_opf_case2000_goc: 188it [00:08, 22.14it/s]Preprocess train pglib_opf_case2000_goc: 192it [00:08, 20.07it/s]Preprocess train pglib_opf_case2000_goc: 196it [00:08, 22.63it/s]Preprocess train pglib_opf_case2000_goc: 200it [00:08, 24.88it/s]Preprocess train pglib_opf_case2000_goc: 204it [00:08, 26.68it/s]Preprocess train pglib_opf_case2000_goc: 207it [00:09, 19.32it/s]Preprocess train pglib_opf_case2000_goc: 211it [00:09, 22.09it/s]Preprocess train pglib_opf_case2000_goc: 215it [00:09, 24.52it/s]Preprocess train pglib_opf_case2000_goc: 219it [00:09, 26.46it/s]Preprocess train pglib_opf_case2000_goc: 223it [00:09, 28.01it/s]Preprocess train pglib_opf_case2000_goc: 227it [00:09, 29.16it/s]Preprocess train pglib_opf_case2000_goc: 231it [00:10, 20.93it/s]Preprocess train pglib_opf_case2000_goc: 235it [00:10, 23.42it/s]Preprocess train pglib_opf_case2000_goc: 239it [00:10, 25.58it/s]Preprocess train pglib_opf_case2000_goc: 243it [00:10, 27.22it/s]Preprocess train pglib_opf_case2000_goc: 247it [00:10, 28.58it/s]Preprocess train pglib_opf_case2000_goc: 251it [00:10, 20.74it/s]Preprocess train pglib_opf_case2000_goc: 255it [00:11, 23.18it/s]Preprocess train pglib_opf_case2000_goc: 258it [00:11, 20.15it/s]Preprocess train pglib_opf_case2000_goc: 261it [00:11, 21.68it/s]Preprocess train pglib_opf_case2000_goc: 265it [00:11, 24.39it/s]Preprocess train pglib_opf_case2000_goc: 268it [00:11, 18.21it/s]Preprocess train pglib_opf_case2000_goc: 272it [00:11, 21.31it/s]Preprocess train pglib_opf_case2000_goc: 276it [00:12, 23.73it/s]Preprocess train pglib_opf_case2000_goc: 280it [00:12, 25.96it/s]Preprocess train pglib_opf_case2000_goc: 284it [00:12, 27.70it/s]Preprocess train pglib_opf_case2000_goc: 288it [00:12, 29.33it/s]Preprocess train pglib_opf_case2000_goc: 292it [00:12, 14.95it/s]Preprocess train pglib_opf_case2000_goc: 296it [00:13, 17.86it/s]Preprocess train pglib_opf_case2000_goc: 300it [00:13, 20.73it/s]Preprocess train pglib_opf_case2000_goc: 304it [00:13, 23.31it/s]Preprocess train pglib_opf_case2000_goc: 308it [00:13, 25.49it/s]Preprocess train pglib_opf_case2000_goc: 312it [00:13, 27.22it/s]Preprocess train pglib_opf_case2000_goc: 316it [00:13, 19.93it/s]Preprocess train pglib_opf_case2000_goc: 320it [00:14, 19.06it/s]Preprocess train pglib_opf_case2000_goc: 324it [00:14, 21.75it/s]Preprocess train pglib_opf_case2000_goc: 328it [00:14, 24.10it/s]Preprocess train pglib_opf_case2000_goc: 331it [00:14, 18.22it/s]Preprocess train pglib_opf_case2000_goc: 335it [00:14, 20.95it/s]Preprocess train pglib_opf_case2000_goc: 339it [00:14, 23.56it/s]Preprocess train pglib_opf_case2000_goc: 343it [00:15, 25.74it/s]Preprocess train pglib_opf_case2000_goc: 347it [00:15, 27.48it/s]Preprocess train pglib_opf_case2000_goc: 350it [00:15, 19.59it/s]Preprocess train pglib_opf_case2000_goc: 354it [00:15, 22.42it/s]Preprocess train pglib_opf_case2000_goc: 358it [00:15, 24.72it/s]Preprocess train pglib_opf_case2000_goc: 362it [00:15, 26.69it/s]Preprocess train pglib_opf_case2000_goc: 366it [00:15, 28.24it/s]Preprocess train pglib_opf_case2000_goc: 370it [00:16, 29.35it/s]Preprocess train pglib_opf_case2000_goc: 374it [00:16, 20.86it/s]Preprocess train pglib_opf_case2000_goc: 377it [00:16, 22.37it/s]Preprocess train pglib_opf_case2000_goc: 381it [00:16, 24.72it/s]Preprocess train pglib_opf_case2000_goc: 384it [00:16, 20.91it/s]Preprocess train pglib_opf_case2000_goc: 388it [00:16, 23.45it/s]Preprocess train pglib_opf_case2000_goc: 392it [00:17, 25.58it/s]Preprocess train pglib_opf_case2000_goc: 395it [00:17, 18.64it/s]Preprocess train pglib_opf_case2000_goc: 399it [00:17, 21.64it/s]Preprocess train pglib_opf_case2000_goc: 403it [00:17, 24.17it/s]Preprocess train pglib_opf_case2000_goc: 407it [00:17, 26.14it/s]Preprocess train pglib_opf_case2000_goc: 411it [00:18, 19.60it/s]Preprocess train pglib_opf_case2000_goc: 415it [00:18, 22.25it/s]Preprocess train pglib_opf_case2000_goc: 419it [00:18, 24.54it/s]Preprocess train pglib_opf_case2000_goc: 423it [00:18, 26.48it/s]Preprocess train pglib_opf_case2000_goc: 427it [00:18, 27.95it/s]Preprocess train pglib_opf_case2000_goc: 431it [00:18, 20.36it/s]Preprocess train pglib_opf_case2000_goc: 435it [00:18, 22.90it/s]Preprocess train pglib_opf_case2000_goc: 439it [00:19, 25.11it/s]Preprocess train pglib_opf_case2000_goc: 443it [00:19, 26.88it/s]Preprocess train pglib_opf_case2000_goc: 447it [00:19, 28.33it/s]Preprocess train pglib_opf_case2000_goc: 451it [00:19, 23.49it/s]Preprocess train pglib_opf_case2000_goc: 454it [00:19, 17.96it/s]Preprocess train pglib_opf_case2000_goc: 458it [00:20, 20.87it/s]Preprocess train pglib_opf_case2000_goc: 462it [00:20, 23.33it/s]Preprocess train pglib_opf_case2000_goc: 466it [00:20, 25.44it/s]Preprocess train pglib_opf_case2000_goc: 470it [00:20, 27.04it/s]Preprocess train pglib_opf_case2000_goc: 473it [00:20, 19.40it/s]Preprocess train pglib_opf_case2000_goc: 477it [00:20, 22.10it/s]Preprocess train pglib_opf_case2000_goc: 481it [00:20, 24.52it/s]Preprocess train pglib_opf_case2000_goc: 485it [00:21, 26.15it/s]Preprocess train pglib_opf_case2000_goc: 488it [00:21, 26.63it/s]Preprocess train pglib_opf_case2000_goc: 491it [00:21, 18.90it/s]Preprocess train pglib_opf_case2000_goc: 495it [00:21, 21.85it/s]Preprocess train pglib_opf_case2000_goc: 499it [00:21, 24.32it/s]Preprocess train pglib_opf_case2000_goc: 503it [00:21, 26.25it/s]Preprocess train pglib_opf_case2000_goc: 506it [00:22, 18.78it/s]Preprocess train pglib_opf_case2000_goc: 510it [00:22, 21.76it/s]Preprocess train pglib_opf_case2000_goc: 513it [00:22, 19.18it/s]Preprocess train pglib_opf_case2000_goc: 517it [00:22, 22.13it/s]Preprocess train pglib_opf_case2000_goc: 521it [00:22, 24.65it/s]Preprocess train pglib_opf_case2000_goc: 525it [00:22, 26.57it/s]Preprocess train pglib_opf_case2000_goc: 528it [00:23, 19.08it/s]Preprocess train pglib_opf_case2000_goc: 532it [00:23, 21.93it/s]Preprocess train pglib_opf_case2000_goc: 536it [00:23, 24.42it/s]Preprocess train pglib_opf_case2000_goc: 540it [00:23, 26.32it/s]Preprocess train pglib_opf_case2000_goc: 544it [00:23, 27.69it/s]Preprocess train pglib_opf_case2000_goc: 547it [00:23, 19.62it/s]Preprocess train pglib_opf_case2000_goc: 551it [00:24, 22.43it/s]Preprocess train pglib_opf_case2000_goc: 555it [00:24, 24.80it/s]Preprocess train pglib_opf_case2000_goc: 559it [00:24, 26.80it/s]Preprocess train pglib_opf_case2000_goc: 563it [00:24, 28.23it/s]Preprocess train pglib_opf_case2000_goc: 567it [00:24, 20.19it/s]Preprocess train pglib_opf_case2000_goc: 571it [00:24, 22.70it/s]Preprocess train pglib_opf_case2000_goc: 575it [00:24, 24.91it/s]Preprocess train pglib_opf_case2000_goc: 578it [00:25, 21.39it/s]Preprocess train pglib_opf_case2000_goc: 582it [00:25, 17.52it/s]Preprocess train pglib_opf_case2000_goc: 586it [00:25, 20.40it/s]Preprocess train pglib_opf_case2000_goc: 590it [00:25, 22.90it/s]Preprocess train pglib_opf_case2000_goc: 594it [00:25, 25.18it/s]Preprocess train pglib_opf_case2000_goc: 598it [00:25, 26.97it/s]Preprocess train pglib_opf_case2000_goc: 602it [00:26, 28.53it/s]Preprocess train pglib_opf_case2000_goc: 606it [00:26, 20.49it/s]Preprocess train pglib_opf_case2000_goc: 610it [00:26, 22.95it/s]Preprocess train pglib_opf_case2000_goc: 614it [00:26, 25.13it/s]Preprocess train pglib_opf_case2000_goc: 618it [00:26, 26.88it/s]Preprocess train pglib_opf_case2000_goc: 621it [00:27, 19.37it/s]Preprocess train pglib_opf_case2000_goc: 625it [00:27, 22.18it/s]Preprocess train pglib_opf_case2000_goc: 629it [00:27, 24.61it/s]Preprocess train pglib_opf_case2000_goc: 633it [00:27, 26.44it/s]Preprocess train pglib_opf_case2000_goc: 637it [00:27, 27.99it/s]Preprocess train pglib_opf_case2000_goc: 641it [00:28, 17.17it/s]Preprocess train pglib_opf_case2000_goc: 645it [00:28, 19.96it/s]Preprocess train pglib_opf_case2000_goc: 649it [00:28, 22.55it/s]Preprocess train pglib_opf_case2000_goc: 653it [00:28, 24.80it/s]Preprocess train pglib_opf_case2000_goc: 657it [00:28, 26.47it/s]Preprocess train pglib_opf_case2000_goc: 661it [00:28, 19.84it/s]Preprocess train pglib_opf_case2000_goc: 665it [00:28, 22.38it/s]Preprocess train pglib_opf_case2000_goc: 669it [00:29, 24.49it/s]Preprocess train pglib_opf_case2000_goc: 673it [00:29, 26.35it/s]Preprocess train pglib_opf_case2000_goc: 677it [00:29, 27.80it/s]Preprocess train pglib_opf_case2000_goc: 681it [00:29, 28.99it/s]Preprocess train pglib_opf_case2000_goc: 685it [00:29, 20.69it/s]Preprocess train pglib_opf_case2000_goc: 689it [00:29, 23.12it/s]Preprocess train pglib_opf_case2000_goc: 693it [00:30, 25.31it/s]Preprocess train pglib_opf_case2000_goc: 697it [00:30, 27.01it/s]Preprocess train pglib_opf_case2000_goc: 701it [00:30, 19.99it/s]Preprocess train pglib_opf_case2000_goc: 704it [00:30, 18.32it/s]Preprocess train pglib_opf_case2000_goc: 708it [00:30, 21.17it/s]Preprocess train pglib_opf_case2000_goc: 712it [00:30, 23.78it/s]Preprocess train pglib_opf_case2000_goc: 716it [00:31, 25.81it/s]Preprocess train pglib_opf_case2000_goc: 720it [00:31, 27.57it/s]Preprocess train pglib_opf_case2000_goc: 724it [00:31, 28.76it/s]Preprocess train pglib_opf_case2000_goc: 728it [00:31, 20.67it/s]Preprocess train pglib_opf_case2000_goc: 732it [00:31, 23.07it/s]Preprocess train pglib_opf_case2000_goc: 736it [00:31, 25.26it/s]Preprocess train pglib_opf_case2000_goc: 740it [00:32, 27.03it/s]Preprocess train pglib_opf_case2000_goc: 744it [00:32, 28.35it/s]Preprocess train pglib_opf_case2000_goc: 748it [00:32, 20.54it/s]Preprocess train pglib_opf_case2000_goc: 752it [00:32, 23.00it/s]Preprocess train pglib_opf_case2000_goc: 756it [00:32, 25.22it/s]Preprocess train pglib_opf_case2000_goc: 760it [00:32, 27.02it/s]Preprocess train pglib_opf_case2000_goc: 764it [00:32, 28.33it/s]Preprocess train pglib_opf_case2000_goc: 768it [00:33, 17.49it/s]Preprocess train pglib_opf_case2000_goc: 772it [00:33, 20.15it/s]Preprocess train pglib_opf_case2000_goc: 776it [00:33, 22.71it/s]Preprocess train pglib_opf_case2000_goc: 780it [00:33, 24.88it/s]Preprocess train pglib_opf_case2000_goc: 784it [00:33, 26.60it/s]Preprocess train pglib_opf_case2000_goc: 787it [00:34, 19.23it/s]Preprocess train pglib_opf_case2000_goc: 791it [00:34, 22.04it/s]Preprocess train pglib_opf_case2000_goc: 795it [00:34, 24.35it/s]Preprocess train pglib_opf_case2000_goc: 799it [00:34, 26.35it/s]Preprocess train pglib_opf_case2000_goc: 803it [00:34, 19.69it/s]Preprocess train pglib_opf_case2000_goc: 807it [00:35, 22.28it/s]Preprocess train pglib_opf_case2000_goc: 811it [00:35, 24.53it/s]Preprocess train pglib_opf_case2000_goc: 815it [00:35, 26.26it/s]Preprocess train pglib_opf_case2000_goc: 819it [00:35, 27.83it/s]Preprocess train pglib_opf_case2000_goc: 823it [00:35, 28.99it/s]Preprocess train pglib_opf_case2000_goc: 827it [00:35, 29.80it/s]Preprocess train pglib_opf_case2000_goc: 831it [00:35, 21.06it/s]Preprocess train pglib_opf_case2000_goc: 834it [00:36, 18.98it/s]Preprocess train pglib_opf_case2000_goc: 838it [00:36, 21.79it/s]Preprocess train pglib_opf_case2000_goc: 842it [00:36, 24.23it/s]                                                                 INFO (rank 0): Timing case=pglib_opf_case2000_goc split=train phase=preprocess local_samples=844: max=38.22s avg=37.25s
+Preprocess val pglib_opf_case2000_goc: 0it [00:00, ?it/s]Preprocess val pglib_opf_case2000_goc: 2it [00:00, 17.96it/s]Preprocess val pglib_opf_case2000_goc: 4it [00:00, 10.41it/s]Preprocess val pglib_opf_case2000_goc: 8it [00:00, 18.03it/s]Preprocess val pglib_opf_case2000_goc: 12it [00:00, 22.70it/s]Preprocess val pglib_opf_case2000_goc: 16it [00:00, 25.76it/s]Preprocess val pglib_opf_case2000_goc: 20it [00:00, 27.87it/s]Preprocess val pglib_opf_case2000_goc: 24it [00:00, 29.28it/s]Preprocess val pglib_opf_case2000_goc: 28it [00:01, 18.86it/s]Preprocess val pglib_opf_case2000_goc: 32it [00:01, 21.80it/s]Preprocess val pglib_opf_case2000_goc: 36it [00:01, 24.30it/s]Preprocess val pglib_opf_case2000_goc: 40it [00:01, 26.31it/s]Preprocess val pglib_opf_case2000_goc: 44it [00:01, 27.86it/s]                                                              INFO (rank 0): Timing case=pglib_opf_case2000_goc split=val phase=preprocess local_samples=47: max=2.23s avg=2.21s
+Preprocess test pglib_opf_case2000_goc: 0it [00:00, ?it/s]Preprocess test pglib_opf_case2000_goc: 3it [00:00, 28.54it/s]Preprocess test pglib_opf_case2000_goc: 7it [00:00, 30.54it/s]Preprocess test pglib_opf_case2000_goc: 11it [00:00, 31.45it/s]Preprocess test pglib_opf_case2000_goc: 15it [00:00, 31.63it/s]Preprocess test pglib_opf_case2000_goc: 19it [00:00, 20.35it/s]Preprocess test pglib_opf_case2000_goc: 23it [00:00, 23.02it/s]Preprocess test pglib_opf_case2000_goc: 27it [00:01, 25.40it/s]Preprocess test pglib_opf_case2000_goc: 30it [00:01, 26.22it/s]Preprocess test pglib_opf_case2000_goc: 34it [00:01, 27.78it/s]Preprocess test pglib_opf_case2000_goc: 37it [00:01, 19.53it/s]Preprocess test pglib_opf_case2000_goc: 41it [00:01, 22.49it/s]Preprocess test pglib_opf_case2000_goc: 45it [00:01, 25.00it/s]                                                               INFO (rank 0): Timing case=pglib_opf_case2000_goc split=test phase=preprocess local_samples=47: max=2.02s avg=1.96s
+INFO (rank 0): Local split sizes: train=844, val=47, test=47
+INFO (rank 8): Local split sizes: train=844, val=47, test=47
+INFO (rank 1): Local split sizes: train=844, val=47, test=47
+INFO (rank 9): Local split sizes: train=844, val=47, test=47
+INFO (rank 5): Local split sizes: train=844, val=47, test=47
+INFO (rank 10): Local split sizes: train=844, val=47, test=47
+INFO (rank 2): Local split sizes: train=844, val=47, test=47
+INFO (rank 13): Local split sizes: train=843, val=47, test=47
+INFO (rank 3): Local split sizes: train=844, val=47, test=47
+INFO (rank 14): Local split sizes: train=843, val=46, test=46
+INFO (rank 4): Local split sizes: train=844, val=47, test=47
+INFO (rank 11): Local split sizes: train=844, val=47, test=47
+INFO (rank 6): Local split sizes: train=844, val=47, test=47
+INFO (rank 12): Local split sizes: train=843, val=47, test=47
+INFO (rank 7): Local split sizes: train=844, val=47, test=47
+INFO (rank 15): Local split sizes: train=843, val=46, test=46
+INFO (rank 0): Timing phase=serialize format=hdf5 model=case2000: max=0.02s avg=0.02s
