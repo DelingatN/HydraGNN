@@ -4,7 +4,7 @@
 #SBATCH -J jac-models-500-gpu
 #SBATCH -o /lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/job-opf-jacobian-case500-models-gpu-%j.out
 #SBATCH -e /lustre/orion/lrn070/proj-shared/ndelingat/HydraGNN/job-opf-jacobian-case500-models-gpu-%j.out
-#SBATCH -t 04:00:00
+#SBATCH -t 00:10:00
 #SBATCH -p batch
 #SBATCH -N 1
 #SBATCH -n 1
@@ -20,7 +20,13 @@ ENVIRONMENT_DIR="$HYDRAGNN_ROOT/installation_DOE_supercomputers/HydraGNN-Install
 # Add model log-folder names here. Each folder must contain config.json and a
 # checkpoint named <model-name>.pk.
 MODEL_NAMES=(
-    "sage_n-case500"
+    "sage_g-case500"
+    "heat_g-case500"
+    "hgt_g-case500"
+    "pna_g-case500"
+    "rgat_g-case500"
+    "gat_g-case500"
+    "gin_g-case500"
 )
 
 DATASET_NAME=case500
