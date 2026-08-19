@@ -150,14 +150,7 @@ class HeteroHEATStack(HeteroBase):
     def forward(self, data):
         self._maybe_init_metadata(data)
 
-        x_dict = data.x_dict
-        self._ensure_node_embedders(x_dict)
-        x_dict = {
-            node_type: self.node_embedders[node_type](x.float())
-            for node_type, x in x_dict.items()
-        }
-
-        batch_dict = self._get_batch_dict(data, x_dict)
+        x_dict, batch_dict = self._prepare_node_features(data)
         edge_attr_dict = self._get_edge_attr_dict(data)
 
         node_heads = self.config_heads.get("node", [])

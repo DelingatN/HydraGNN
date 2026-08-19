@@ -63,6 +63,7 @@ class HeteroBase(Module):
         node_input_dims: dict | None = None,
         metadata=None,
         attn_only: bool = False,
+        positional_encodings: dict | None = None,
     ):
         super().__init__()
 
@@ -78,6 +79,7 @@ class HeteroBase(Module):
         self.node_embedders = ModuleDict()
         self._node_input_dims = node_input_dims
         self.node_target_type = node_target_type
+        self.positional_encodings = positional_encodings or {}
         self.share_relation_weights = share_relation_weights
         self._metadata = metadata
         self._initialized = False
@@ -107,6 +109,66 @@ class HeteroBase(Module):
         self.activation_function = activation_function_selection(
             activation_function_type
         )
+
+        active_pe_sources = self.positional_encodings.get("use", [])
+        if isinstance(active_pe_sources, str):
+            active_pe_sources = [active_pe_sources]
+        aliases = {
+            "lpe": "laplacian",
+            "topological_laplacian": "laplacian",
+            "resistance": "effective_resistance",
+            "er": "effective_resistance",
+        }
+        self.active_pe_sources = {
+            aliases.get(str(source).lower(), str(source).lower())
+            for source in active_pe_sources
+        }
+        unsupported = self.active_pe_sources - {
+            "laplacian",
+            "effective_resistance",
+        }
+        if unsupported:
+            raise ValueError(
+                "Unsupported heterogeneous input PE source(s): "
+                f"{sorted(unsupported)}."
+            )
+
+        laplacian_config = self.positional_encodings.get("laplacian", {})
+        self.laplacian_pe_dim = (
+            int(laplacian_config.get("dim", 8))
+            if "laplacian" in self.active_pe_sources
+            else 0
+        )
+        if "laplacian" in self.active_pe_sources and self.laplacian_pe_dim <= 0:
+            raise ValueError("Active Laplacian PE requires a positive dimension.")
+        self.laplacian_random_sign_flip = bool(
+            laplacian_config.get("random_sign_flip", False)
+        )
+        resistance_statistics = self.positional_encodings.get(
+            "effective_resistance", {}
+        ).get("statistics", ["min", "max", "std", "median", "mean"])
+        if "effective_resistance" in self.active_pe_sources and list(
+            resistance_statistics
+        ) != ["min", "max", "std", "median", "mean"]:
+            raise ValueError(
+                "Effective-resistance PE statistics must be "
+                "['min', 'max', 'std', 'median', 'mean'], in that order."
+            )
+        self.effective_resistance_pe_dim = (
+            len(resistance_statistics)
+            if "effective_resistance" in self.active_pe_sources
+            else 0
+        )
+        self.bus_input_pe_dim = (
+            2 * self.laplacian_pe_dim + self.effective_resistance_pe_dim
+        )
+        self.bus_pe_fuser = None
+        if self.bus_input_pe_dim > 0:
+            self.bus_pe_fuser = Sequential(
+                Linear(self.hidden_dim + self.bus_input_pe_dim, self.hidden_dim),
+                activation_function_selection(activation_function_type),
+                Linear(self.hidden_dim, self.hidden_dim),
+            )
 
         self.use_graph_attr_conditioning = use_graph_attr_conditioning
         self.graph_attr_conditioning_mode = graph_attr_conditioning_mode.lower()
@@ -198,6 +260,21 @@ class HeteroBase(Module):
 
         if self._node_input_dims:
             self._init_node_embedders_from_dims(self._node_input_dims)
+
+    def _node_target_type_for_head(self, ihead):
+        targets = self.node_target_type
+        if isinstance(targets, (list, tuple)):
+            node_head_index = sum(
+                1 for head_type in self.head_type[:ihead] if head_type == "node"
+            )
+            if node_head_index >= len(targets):
+                raise ValueError(
+                    "node_target_type has fewer entries than node output heads."
+                )
+            return targets[node_head_index]
+        if targets is None:
+            return self._metadata[0][0]
+        return targets
 
     def _init_node_embedders_from_dims(self, node_input_dims):
         for node_type, in_dim in node_input_dims.items():
@@ -511,6 +588,117 @@ class HeteroBase(Module):
             edge_attr_dict = None
         return edge_attr_dict
 
+    def _apply_laplacian_sign_flip(self, eigenvectors, batch):
+        """Flip each graph/eigenmode once during training, never per node."""
+
+        if not (self.training and self.laplacian_random_sign_flip):
+            return eigenvectors
+        num_graphs = int(batch.max().item()) + 1 if batch.numel() else 0
+        if num_graphs == 0:
+            return eigenvectors
+        signs = torch.randint(
+            0,
+            2,
+            (num_graphs, eigenvectors.size(1)),
+            device=eigenvectors.device,
+        )
+        signs = signs.to(eigenvectors.dtype).mul_(2.0).sub_(1.0)
+        return eigenvectors * signs[batch]
+
+    @staticmethod
+    def _expand_graph_eigenvalues(eigenvalues, batch, num_nodes, width):
+        if eigenvalues.dim() == 1:
+            eigenvalues = eigenvalues.view(-1, width)
+        if eigenvalues.dim() != 2 or eigenvalues.size(1) != width:
+            raise ValueError(
+                f"Expected Laplacian eigenvalues with width {width}, got "
+                f"shape {tuple(eigenvalues.shape)}."
+            )
+        if eigenvalues.size(0) == num_nodes:
+            return eigenvalues
+        num_graphs = int(batch.max().item()) + 1 if batch.numel() else 0
+        if eigenvalues.size(0) == num_graphs:
+            return eigenvalues[batch]
+        if eigenvalues.size(0) == 1:
+            return eigenvalues.expand(num_nodes, -1)
+        raise ValueError(
+            "Laplacian eigenvalue rows must be one per node or one per graph; "
+            f"got {eigenvalues.size(0)} rows for {num_nodes} nodes and "
+            f"{num_graphs} graphs."
+        )
+
+    def _collect_bus_input_pe(self, data, batch, device, dtype):
+        pieces = []
+        bus_store = data["bus"]
+        num_bus = int(batch.numel())
+
+        if self.laplacian_pe_dim > 0:
+            eigenvectors = getattr(bus_store, "lap_eigvec", None)
+            eigenvalues = getattr(bus_store, "lap_eigval", None)
+            if eigenvectors is None or eigenvalues is None:
+                raise ValueError(
+                    "Laplacian PE is active, but bus.lap_eigvec or "
+                    "bus.lap_eigval is missing. Re-run OPF preprocessing."
+                )
+            eigenvectors = eigenvectors.to(device=device, dtype=dtype)
+            eigenvalues = eigenvalues.to(device=device, dtype=dtype)
+            expected = (num_bus, self.laplacian_pe_dim)
+            if tuple(eigenvectors.shape) != expected:
+                raise ValueError(
+                    f"Expected bus.lap_eigvec shape {expected}, got "
+                    f"{tuple(eigenvectors.shape)}."
+                )
+            eigenvectors = self._apply_laplacian_sign_flip(eigenvectors, batch)
+            eigenvalues = self._expand_graph_eigenvalues(
+                eigenvalues, batch, num_bus, self.laplacian_pe_dim
+            )
+            pieces.extend((eigenvectors, eigenvalues))
+
+        if self.effective_resistance_pe_dim > 0:
+            resistance = getattr(bus_store, "effective_resistance_pe", None)
+            if resistance is None:
+                raise ValueError(
+                    "Effective-resistance PE is active, but "
+                    "bus.effective_resistance_pe is missing. Re-run OPF "
+                    "preprocessing."
+                )
+            resistance = resistance.to(device=device, dtype=dtype)
+            expected = (num_bus, self.effective_resistance_pe_dim)
+            if tuple(resistance.shape) != expected:
+                raise ValueError(
+                    f"Expected bus.effective_resistance_pe shape {expected}, "
+                    f"got {tuple(resistance.shape)}."
+                )
+            pieces.append(resistance)
+
+        return torch.cat(pieces, dim=-1) if pieces else None
+
+    def _prepare_node_features(self, data):
+        try:
+            x_dict = data.x_dict
+        except (AttributeError, KeyError):
+            x_dict = None
+        if x_dict is None:
+            raise ValueError("Heterogeneous input is missing x_dict.")
+
+        batch_dict = self._get_batch_dict(data, x_dict)
+        self._ensure_node_embedders(x_dict)
+        embedded_dict = {}
+        for node_type, x in x_dict.items():
+            embedded = self.node_embedders[node_type](x.float())
+            if node_type == "bus" and self.bus_pe_fuser is not None:
+                positional = self._collect_bus_input_pe(
+                    data,
+                    batch_dict[node_type],
+                    device=embedded.device,
+                    dtype=embedded.dtype,
+                )
+                embedded = self.bus_pe_fuser(
+                    torch.cat((embedded, positional), dim=-1)
+                )
+            embedded_dict[node_type] = embedded
+        return embedded_dict, batch_dict
+
     def _pool_hetero_graph_features(self, x_dict, batch_dict):
         pooled = []
         for node_type, x in x_dict.items():
@@ -763,8 +951,8 @@ class HeteroBase(Module):
 
         datasetIDs = data.dataset_name.unique()
 
-        for head_dim, headloc, type_head in zip(
-            self.head_dims, self.heads_NN, self.head_type
+        for ihead, (head_dim, headloc, type_head) in enumerate(
+            zip(self.head_dims, self.heads_NN, self.head_type)
         ):
             if type_head == "graph":
                 head = torch.zeros(
@@ -799,10 +987,9 @@ class HeteroBase(Module):
                 outputs.append(head)
                 outputs_var.append(headvar)
             else:
-                if self.node_target_type is None:
-                    self.node_target_type = self._metadata[0][0]
-                x_node = x_dict[self.node_target_type]
-                batch_node = batch_dict[self.node_target_type]
+                node_target_type = self._node_target_type_for_head(ihead)
+                x_node = x_dict[node_target_type]
+                batch_node = batch_dict[node_target_type]
 
                 try:
                     head_device = next(headloc.parameters()).device
@@ -844,7 +1031,7 @@ class HeteroBase(Module):
                             x = batch_norm[node_type](x)
                             x = self.activation_function(x)
                             x_dict_node[node_type] = x
-                    x_node_out = x_dict_node[self.node_target_type]
+                    x_node_out = x_dict_node[node_target_type]
                     head = x_node_out[:, :head_dim]
                     headvar = x_node_out[:, head_dim:] ** 2
                 else:

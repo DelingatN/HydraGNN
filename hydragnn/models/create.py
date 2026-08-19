@@ -113,6 +113,9 @@ def create_model_config(
         share_relation_weights=config["Architecture"].get(
             "share_relation_weights", False
         ),
+        positional_encodings=config["Architecture"].get(
+            "positional_encodings", None
+        ),
         metadata=metadata,
         node_input_dims=node_input_dims,
         hetero_attention_heads=config["Architecture"].get("hetero_attention_heads", 4),
@@ -188,6 +191,7 @@ def create_model(
     hetero_pooling_mode: str = "sum",
     node_target_type: str = None,
     share_relation_weights: bool = False,
+    positional_encodings: dict | None = None,
     metadata=None,
     node_input_dims=None,
     hetero_attention_heads: int = 4,
@@ -648,6 +652,7 @@ def create_model(
             metadata=metadata,
             node_input_dims=node_input_dims,
             attn_only=attn_only,
+            positional_encodings=positional_encodings,
         )
 
     elif mpnn_type == "HeteroSAGE":
@@ -678,6 +683,7 @@ def create_model(
             metadata=metadata,
             node_input_dims=node_input_dims,
             attn_only=attn_only,
+            positional_encodings=positional_encodings,
         )
 
     elif mpnn_type == "HeteroGAT":
@@ -713,6 +719,7 @@ def create_model(
             metadata=metadata,
             node_input_dims=node_input_dims,
             attn_only=attn_only,
+            positional_encodings=positional_encodings,
         )
 
     elif mpnn_type == "HeteroPNA":
@@ -746,6 +753,7 @@ def create_model(
             metadata=metadata,
             node_input_dims=node_input_dims,
             attn_only=attn_only,
+            positional_encodings=positional_encodings,
         )
     elif mpnn_type == "HeteroRGAT":
         model = HeteroRGATStack(
@@ -778,6 +786,7 @@ def create_model(
             metadata=metadata,
             node_input_dims=node_input_dims,
             attn_only=attn_only,
+            positional_encodings=positional_encodings,
         )
     elif mpnn_type == "HeteroHGT":
         model = HeteroHGTStack(
@@ -808,6 +817,7 @@ def create_model(
             metadata=metadata,
             node_input_dims=node_input_dims,
             attn_only=attn_only,
+            positional_encodings=positional_encodings,
         )
     elif mpnn_type == "HeteroHEAT":
         model = HeteroHEATStack(
@@ -840,6 +850,7 @@ def create_model(
             metadata=metadata,
             node_input_dims=node_input_dims,
             attn_only=attn_only,
+            positional_encodings=positional_encodings,
         )
     else:
         raise ValueError("Unknown mpnn_type: {0}".format(mpnn_type))

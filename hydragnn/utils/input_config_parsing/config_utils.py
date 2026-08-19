@@ -64,6 +64,8 @@ def update_config(config, train_loader, val_loader, test_loader):
         config["NeuralNetwork"]["Architecture"]["attn_only"] = False
     if "pe_dim" not in config["NeuralNetwork"]["Architecture"]:
         config["NeuralNetwork"]["Architecture"]["pe_dim"] = 0
+    if "positional_encodings" not in config["NeuralNetwork"]["Architecture"]:
+        config["NeuralNetwork"]["Architecture"]["positional_encodings"] = None
 
     # update output_heads with latest config rules
     config["NeuralNetwork"]["Architecture"]["output_heads"] = update_multibranch_heads(
@@ -90,6 +92,9 @@ def update_config(config, train_loader, val_loader, test_loader):
         config["NeuralNetwork"]["Architecture"]["max_neighbours"] = len(deg) - 1
     else:
         config["NeuralNetwork"]["Architecture"]["pna_deg"] = None
+        config["NeuralNetwork"]["Architecture"].setdefault(
+            "max_neighbours", None
+        )
 
     # Set CGCNN hidden dim to input dim if global attention is not being used
     if (
@@ -306,11 +311,20 @@ def update_config_NN_outputs(config, data, graph_size_variable):
                     raise ValueError(
                         '"mlp_per_node" is not allowed for variable graph size, Please set config["NeuralNetwork"]["Architecture"]["output_heads"]["node"]["type"] to be "mlp" or "conv" in input file.'
                     )
-                denom_nodes = (
-                    data.y_num_nodes
-                    if hasattr(data, "y_num_nodes") and data.y_num_nodes is not None
-                    else data.num_nodes
-                )
+                denom_nodes = data.num_nodes
+                if hasattr(data, "y_num_nodes") and data.y_num_nodes is not None:
+                    y_num_nodes = data.y_num_nodes.reshape(-1)
+                    if y_num_nodes.numel() == 1:
+                        denom_nodes = y_num_nodes[0]
+                    elif ihead < y_num_nodes.numel():
+                        denom_nodes = y_num_nodes[ihead]
+                    else:
+                        raise ValueError(
+                            "y_num_nodes has fewer entries than node output heads."
+                        )
+                denom_nodes = int(denom_nodes)
+                if denom_nodes <= 0:
+                    raise ValueError("Node output heads require at least one node.")
                 dim_item = (
                     data.y_loc[0, ihead + 1].item() - data.y_loc[0, ihead].item()
                 ) // denom_nodes

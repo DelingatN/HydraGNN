@@ -1,0 +1,166 @@
+{
+    "Verbosity": {
+        "level": 2
+    },
+    "NeuralNetwork": {
+        "Architecture": {
+            "mpnn_type": "HeteroHGT",
+            "hidden_dim": 64,
+            "num_conv_layers": 4,
+            "hetero_attention_heads": 4,
+            "global_attn_engine": "GPS",
+            "global_attn_type": "multihead",
+            "global_attn_heads": 4,
+            "attn_only": false,
+            "pe_dim": 0,
+            "positional_encodings": {
+                "precompute": [
+                    "laplacian",
+                    "effective_resistance"
+                ],
+                "use": [
+                    "effective_resistance"
+                ],
+                "cache_by_case": true,
+                "compute_device": "auto",
+                "laplacian": {
+                    "dim": 8,
+                    "relative_tolerance": null,
+                    "random_sign_flip": false
+                },
+                "effective_resistance": {
+                    "statistics": [
+                        "min",
+                        "max",
+                        "std",
+                        "median",
+                        "mean"
+                    ],
+                    "exclude_diagonal": true,
+                    "std_correction": 0
+                }
+            },
+            "edge_dim": {
+                "ac_line": 9,
+                "transformer": 11
+            },
+            "node_input_dims": {
+                "bus": 4,
+                "generator": 11,
+                "load": 2,
+                "shunt": 2
+            },
+            "output_heads": {
+                "node": {
+                    "num_headlayers": 2,
+                    "dim_headlayers": [
+                        64,
+                        32
+                    ],
+                    "type": "mlp"
+                }
+            },
+            "task_weights": [
+                1.0,
+                1.0
+            ],
+            "hetero_pooling_mode": "sum",
+            "node_target_type": [
+                "bus",
+                "generator"
+            ],
+            "share_relation_weights": false
+        },
+        "Variables_of_interest": {
+            "input_node_features": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "graph_feature_names": [
+                "context"
+            ],
+            "graph_feature_dims": [
+                1
+            ],
+            "node_feature_names": [
+                "node_features"
+            ],
+            "node_feature_dims": [
+                4
+            ],
+            "output_names": [
+                "bus_solution",
+                "generator_solution"
+            ],
+            "output_index": [
+                0,
+                1
+            ],
+            "output_dim": [
+                2,
+                2
+            ],
+            "type": [
+                "node",
+                "node"
+            ],
+            "denormalize_output": false
+        },
+        "Training": {
+            "num_epoch": 50,
+            "batch_size": 32,
+            "patience": 10,
+            "early_stopping": true,
+            "Checkpoint": true,
+            "checkpoint_warmup": 1,
+            "continue": 0,
+            "startfrom": "existing_model",
+            "loss_function_type": "mse",
+            "precision": "fp32",
+            "DomainLoss": {
+                "enabled": true,
+                "mode": "augmented_lagrangian",
+                "rho": 0.001,
+                "constraints": [
+                    "power_balance_p",
+                    "power_balance_q",
+                    "voltage_bounds",
+                    "ac_line_angle_bounds",
+                    "transformer_angle_bounds",
+                    "ac_line_apparent_power_limit",
+                    "transformer_apparent_power_limit",
+                    "generator_active_power_bounds",
+                    "generator_reactive_power_bounds"
+                ],
+                "monitor_constraints": "all",
+                "monitor_all_constraints": true,
+                "va_output_index": 0,
+                "voltage_output_index": 1,
+                "pg_output_index": 0,
+                "qg_output_index": 1,
+                "voltage_bound_feature_indices": [
+                    2,
+                    3
+                ],
+                "generator_bound_feature_indices": {
+                    "pmin": 2,
+                    "pmax": 3,
+                    "qmin": 5,
+                    "qmax": 6
+                },
+                "dc_flow_slack": 0.0001
+            },
+            "Optimizer": {
+                "type": "AdamW",
+                "learning_rate": 0.001
+            }
+        }
+    },
+    "Visualization": {
+        "plot_init_solution": false,
+        "plot_hist_solution": false,
+        "create_plots": false
+    }
+}

@@ -325,6 +325,18 @@ def train_validate_test(
     timer.start()
 
     epoch_start = config["Training"].get("epoch_start", 0)
+
+    def _call_optional_model_hook(hook_name, *hook_args):
+        candidates = [model]
+        wrapped = getattr(model, "module", None)
+        if wrapped is not None:
+            candidates.append(wrapped)
+        for candidate in candidates:
+            hook = getattr(candidate, hook_name, None)
+            if callable(hook):
+                return hook(*hook_args)
+        return None
+
     for epoch in range(epoch_start, num_epoch):
         os.environ["HYDRAGNN_EPOCH"] = str(epoch)
         ## timer per epoch
@@ -335,6 +347,7 @@ def train_validate_test(
                 dataloader.sampler.set_epoch(epoch)
 
         with profiler as prof:
+            os.environ["HYDRAGNN_PHASE"] = "train"
             tr.enable()
             tr.start("train")
             train_loss, train_taskserr = train(
@@ -353,7 +366,13 @@ def train_validate_test(
             if epoch == 0:
                 tr.reset()
 
+        # The OPF augmented-Lagrangian wrapper accumulates training residuals
+        # batch-by-batch and performs exactly one DDP-synchronized ascent step
+        # here. Models without this optional hook are unchanged.
+        _call_optional_model_hook("update_physics_duals", epoch, writer)
+
         if int(os.getenv("HYDRAGNN_VALTEST", "1")) == 0:
+            _call_optional_model_hook("finalize_physics_epoch", epoch, writer)
             continue
 
         try:
@@ -361,6 +380,7 @@ def train_validate_test(
         except TypeError:
             optimizer.zero_grad()
 
+        os.environ["HYDRAGNN_PHASE"] = "val"
         val_loss, val_taskserr = validate(
             val_loader,
             model,
@@ -370,6 +390,7 @@ def train_validate_test(
             compute_grad_energy=compute_grad_energy,
             precision=precision,
         )
+        os.environ["HYDRAGNN_PHASE"] = "test"
         test_loss, test_taskserr, true_values, predicted_values = test(
             test_loader,
             model,
@@ -380,6 +401,7 @@ def train_validate_test(
             compute_grad_energy=compute_grad_energy,
             precision=precision,
         )
+        _call_optional_model_hook("finalize_physics_epoch", epoch, writer)
         scheduler.step(val_loss)
         if writer is not None:
             writer.add_scalar("train error", train_loss, epoch)

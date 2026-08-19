@@ -123,13 +123,16 @@ from opf_solution_utils import (
     NodeTargetDatasetAdapter,
     OPFDomainLoss,
     assemble_edge_attr,
-    build_solution_target as _build_solution_target,
     compute_pna_deg_for_hetero_dataset,
     validate_voi_node_features,
-    ensure_node_y_loc as _ensure_node_y_loc,
+    pack_node_targets as _pack_node_targets,
     info,
     resolve_edge_feature_schema,
     resolve_node_target_type as _resolve_node_target_type,
+)
+from opf_positional_encodings import (
+    OPFPositionalEncodingPreprocessor,
+    resolve_opf_positional_encoding_config,
 )
 
 from hydragnn.utils.datasets.hdf5dataset import HDF5Writer, HDF5Dataset
@@ -316,14 +319,14 @@ def _iter_raw_split_for_rank(
 
 def _prepare_sample(
     data,
-    node_target_type: str,
+    node_target_type,
     case_name: str,
     to_homogeneous: bool = False,
     edge_dim=None,
     edge_feature_schema=None,
+    pe_preprocessor=None,
 ):
-    data.y = _build_solution_target(data, node_target_type)
-    _ensure_node_y_loc(data)
+    _pack_node_targets(data, node_target_type)
     data.graph_attr = data.x.view(1, -1).to(torch.float32)
     data.case_name = case_name
     _ensure_non_scalar_attrs(data)
@@ -332,6 +335,8 @@ def _prepare_sample(
     data, _ = assemble_edge_attr(
         data, edge_dim=edge_dim, feature_schema=edge_feature_schema
     )
+    if pe_preprocessor is not None and pe_preprocessor.enabled:
+        data = pe_preprocessor(data, case_name=case_name)
     if not to_homogeneous:
         return data
     _validate_node_stores_for_homogeneous(data)
@@ -650,6 +655,18 @@ if __name__ == "__main__":
 
     arch_config = config.setdefault("NeuralNetwork", {}).setdefault("Architecture", {})
 
+    positional_encoding_config = resolve_opf_positional_encoding_config(arch_config)
+    arch_config["positional_encodings"] = positional_encoding_config
+    if positional_encoding_config["precompute"] and args.format == "adios":
+        raise RuntimeError(
+            "OPF positional encodings are supported with pickle and HDF5, not "
+            "ADIOS. Select --pickle or --hdf5."
+        )
+    pe_preprocessor = OPFPositionalEncodingPreprocessor(
+        arch_config,
+        cache_dir=os.path.join(datadir, "positional_encoding_cache"),
+    )
+
     # CLI overrides for HPO
     for param in ("mpnn_type", "hidden_dim", "num_conv_layers"):
         val = getattr(args, param, None)
@@ -899,6 +916,7 @@ if __name__ == "__main__":
                                 store_homogeneous,
                                 edge_dim=edge_dim,
                                 edge_feature_schema=edge_feature_schema,
+                                pe_preprocessor=pe_preprocessor,
                             )
                         )
                         local_count += 1
@@ -929,6 +947,7 @@ if __name__ == "__main__":
                                 store_homogeneous,
                                 edge_dim=edge_dim,
                                 edge_feature_schema=edge_feature_schema,
+                                pe_preprocessor=pe_preprocessor,
                             )
                         )
                         local_count += 1
@@ -1109,6 +1128,7 @@ if __name__ == "__main__":
                         store_homogeneous,
                         edge_dim=edge_dim,
                         edge_feature_schema=edge_feature_schema,
+                        pe_preprocessor=pe_preprocessor,
                     )
                 )
             if remaining_caps["train"] is not None:
@@ -1138,6 +1158,7 @@ if __name__ == "__main__":
                         store_homogeneous,
                         edge_dim=edge_dim,
                         edge_feature_schema=edge_feature_schema,
+                        pe_preprocessor=pe_preprocessor,
                     )
                 )
             if remaining_caps["val"] is not None:
@@ -1167,6 +1188,7 @@ if __name__ == "__main__":
                         store_homogeneous,
                         edge_dim=edge_dim,
                         edge_feature_schema=edge_feature_schema,
+                        pe_preprocessor=pe_preprocessor,
                     )
                 )
             if remaining_caps["test"] is not None:
@@ -1262,8 +1284,19 @@ if __name__ == "__main__":
         valset = SimplePickleDataset(basedir=basedir, label="valset", var_config=None)
         testset = SimplePickleDataset(basedir=basedir, label="testset", var_config=None)
 
-    resolved_node_target_type = _resolve_node_target_type(
-        trainset[0], args.node_target_type
+    requested_node_target_types = (
+        [args.node_target_type]
+        if isinstance(args.node_target_type, str)
+        else list(args.node_target_type)
+    )
+    resolved_node_target_types = [
+        _resolve_node_target_type(trainset[0], target_type)
+        for target_type in requested_node_target_types
+    ]
+    resolved_node_target_type = (
+        resolved_node_target_types[0]
+        if isinstance(args.node_target_type, str)
+        else resolved_node_target_types
     )
     if resolved_node_target_type != args.node_target_type:
         info(
@@ -1399,15 +1432,6 @@ if __name__ == "__main__":
         precision=precision,
     )
     _diag("Exited train_validate_test")
-
-    # Flush the final epoch's LossBreakdown line.  The wrapper only flushes on
-    # epoch *transitions* detected inside loss(), so the last epoch's stats would
-    # otherwise never be written (no subsequent epoch triggers the flush).
-    if isinstance(model, OPFEnhancedModelWrapper):
-        model._flush_epoch_log(model._last_seen_epoch)
-    elif hasattr(model, "module") and isinstance(model.module, OPFEnhancedModelWrapper):
-        # DDP wraps the model in model.module
-        model.module._flush_epoch_log(model.module._last_seen_epoch)
 
     hydragnn.utils.model.save_model(model, optimizer, log_name)
     hydragnn.utils.profiling_and_tracing.print_timers(config["Verbosity"]["level"])

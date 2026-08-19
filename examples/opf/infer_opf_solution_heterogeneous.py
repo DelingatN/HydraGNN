@@ -33,6 +33,7 @@ from opf_solution_utils import (
     resolve_edge_feature_schema,
     resolve_node_target_type,
 )
+from opf_positional_encodings import resolve_opf_positional_encoding_config
 
 try:
     from hydragnn.utils.datasets.adiosdataset import AdiosDataset
@@ -207,6 +208,13 @@ if __name__ == "__main__":
             config = json.load(f)
 
     arch_config = config.setdefault("NeuralNetwork", {}).setdefault("Architecture", {})
+    positional_encoding_config = resolve_opf_positional_encoding_config(arch_config)
+    arch_config["positional_encodings"] = positional_encoding_config
+    if positional_encoding_config["use"] and args.format == "adios":
+        raise RuntimeError(
+            "Active OPF positional encodings require pickle or HDF5 data; "
+            "ADIOS does not preserve these heterogeneous node attributes."
+        )
     raw_edge_dim = arch_config.get("edge_dim")
     if isinstance(raw_edge_dim, dict):
         edge_dim = {str(k): int(v) for k, v in raw_edge_dim.items()}
@@ -260,8 +268,19 @@ if __name__ == "__main__":
         valset = SimplePickleDataset(basedir=basedir, label="valset", var_config=None)
         testset = SimplePickleDataset(basedir=basedir, label="testset", var_config=None)
 
-    resolved_node_target_type = resolve_node_target_type(
-        trainset[0], args.node_target_type
+    requested_node_target_types = (
+        [args.node_target_type]
+        if isinstance(args.node_target_type, str)
+        else list(args.node_target_type)
+    )
+    resolved_node_target_types = [
+        resolve_node_target_type(trainset[0], target_type)
+        for target_type in requested_node_target_types
+    ]
+    resolved_node_target_type = (
+        resolved_node_target_types[0]
+        if isinstance(args.node_target_type, str)
+        else resolved_node_target_types
     )
     if resolved_node_target_type != args.node_target_type:
         info(
