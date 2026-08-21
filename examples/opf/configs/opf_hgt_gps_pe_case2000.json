@@ -22,7 +22,7 @@
                     "effective_resistance"
                 ],
                 "cache_by_case": true,
-                "compute_device": "auto",
+                "compute_device": "cpu",
                 "laplacian": {
                     "dim": 8,
                     "relative_tolerance": null,
