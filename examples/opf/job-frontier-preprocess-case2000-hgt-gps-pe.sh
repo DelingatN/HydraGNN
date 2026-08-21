@@ -29,7 +29,7 @@ OPF_NUM_GROUPS=${OPF_NUM_GROUPS:-all}
 OPF_MODEL_NAME=${OPF_MODEL_NAME:-OPF_HGT_GPS_PE_case2000}
 
 source /lustre/orion/lrn070/world-shared/mlupopa/module-to-load-frontier-rocm711.sh
-source "${HYDRAGNN_VENV}/bin/activate"
+source activate "${HYDRAGNN_VENV}"
 
 export PYTHONPATH="${HYDRAGNN_ROOT}:${HYDRAGNN_VENV}/lib/python3.11/site-packages:${PYTHONPATH:-}"
 export OMP_NUM_THREADS=7
