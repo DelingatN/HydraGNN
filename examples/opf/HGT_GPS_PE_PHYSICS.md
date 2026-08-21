@@ -97,3 +97,24 @@ python examples/opf/train_opf_solution_heterogeneous.py \
   --case_name pglib_opf_case14_ieee \
   --num_groups 1 --modelname OPF_HGT_GPS_PE --hdf5
 ```
+
+## Frontier preprocessing for case 2000
+
+The dedicated Frontier job uses
+`configs/opf_hgt_gps_pe_case2000.json`, processes all locally available
+`pglib_opf_case2000_goc` groups, and writes
+`dataset/OPF_HGT_GPS_PE_case2000.h5`:
+
+```bash
+sbatch examples/opf/job-frontier-preprocess-case2000-hgt-gps-pe.sh
+```
+
+For a small smoke run, override the group and sample limits:
+
+```bash
+sbatch --export=ALL,OPF_NUM_GROUPS=1,OPF_MAX_SAMPLES=100 \
+  examples/opf/job-frontier-preprocess-case2000-hgt-gps-pe.sh
+```
+
+The job refuses to replace an existing output directory. Set
+`OPF_OVERWRITE=1` explicitly when replacement is intended.
